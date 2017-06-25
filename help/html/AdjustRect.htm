@@ -1,0 +1,61 @@
+<!--
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+-->
+<html><head><title>AdjustRect</title>
+<meta name="GENERATOR" content="ForeHTML Pro 5.0">
+<link rel="stylesheet" type="text/css" href="\html\CoolTips.css">
+
+</head>
+
+<body>
+
+<p class="BannerBase">
+AdjustRect (calculate ToolTip display rectangle)</p>
+<p class="HTMLBASE">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>AdjustRect(</b><span  style="font-size: 10pt ; ">BOOL </span><i>fLarger</i>,<span  style="font-size: 10pt ; ">*tagRECT
+</span><i>rc</i> <b>) </b></p>
+ <table padding="2">
+<tr valign="top"><td width="200">
+<b>AdjustRect</b></td><td width="600">
+Calculates a ToolTip control's text display rectangle from its window rectangle, or the ToolTip window
+rectangle needed to display a specified text display rectangle.</td></tr>
+<tr valign="top"><td width="200">
+<i>fLarger</i></td><td width="600">
+Value that specifies which operation to perform. If <span  style=" font-variant: small-caps ;">true</span>,
+<i>rc</i> is used to specify a text-display rectangle and it receives the corresponding window rectangle.
+If <span  style=" font-variant: small-caps ;">false</span>, <i>rc</i> is used to specify a window rectangle
+and it receives the corresponding text display rectangle.</td></tr>
+<tr valign="top"><td width="200">
+<i>rc</i></td><td width="600">
+<span  style=" font-variant: small-caps ;">rect</span> structure to hold either a ToolTip window rectangle
+or a text display rectangle.</td></tr>
+<tr valign="top"><td width="200">
+Return Value</td><td width="600">
+Returns a non-zero value if the rectangle is successfully adjusted, and returns zero if an error occurs.</td></tr>
+<tr valign="top"><td width="200">
+<img src="HELPNOTE.GIF" width="48" height="24" align="baseline" alt="HELPNOTE.GIF" ></td><td width="600">
+Requires version 5.80 or later of Comctl32.dll</td></tr>
+<tr valign="top"><td width="200">
+See Also:</td><td width="600">
+<a href="\html\NewToolRect.htm">NewToolRect</a></td></tr></table>
+
+</body></html>

@@ -1,0 +1,60 @@
+<!--
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+-->
+<html><head><title>Init</title>
+<meta name="GENERATOR" content="ForeHTML Pro 5.0">
+<link rel="stylesheet" type="text/css" href="\html\CoolTips.css">
+
+</head>
+
+<body>
+
+<p class="BannerBase">
+Init (initialize the CoolTips class)</p>
+<p class="HTMLBASE">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Init(</b><span  style="font-size: 10pt ; ">HWND </span><i>hwndParent</i>,
+<span  style="font-size: 10pt ; ">BOOL </span><i>bBalloonTips</i><b>) </b></p>
+ <table padding="2">
+<tr valign="top"><td width="200">
+<b>Init</b></td><td width="600">
+Initializes the CoolTips Class. This method must be called before making any other calls to the class.
+
+<br />
+<br />This method registers specific common controls classes from the common control dynamic-link library
+(comctl32.dll) and initializes properties private to the class.</td></tr>
+<tr valign="top"><td width="200">
+
+<i>hwndParent</i></td><td width="600">
+This is the procedure window{prop:hwnd}</td></tr>
+<tr valign="top"><td width="200">
+<i>bBalloonTips</i></td><td width="600">
+If <span  style=" font-variant: small-caps ;">true</span>, balloontips will be used if supported by the
+version of comctl32.dll on the users machine. If <span  style=" font-variant: small-caps ;">false</span>,
+normal rectangular tooltips will be used.</td></tr>
+<tr valign="top"><td width="200">
+Return Value</td><td width="600">
+Returns the window handle for the ToolTip control.</td></tr>
+<tr valign="top"><td width="200">
+See Also:</td><td width="600">
+<a href="\html\KCR_CoolTips.htm">KCR_CoolTips</a></td></tr></table>
+
+</body></html>

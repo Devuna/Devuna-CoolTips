@@ -1,0 +1,71 @@
+
+[OPTIONS]
+Binary Index=No
+Compatibility=1.1 or later
+Compiled file=CoolTips.chm
+Contents file=CoolTips.hhc
+Default Font=Segoe UI SemiLight,11
+Default Window=default
+Default topic=html\Contents.htm
+Display compile notes=No
+Display compile progress=No
+Enhanced decompilation=Yes
+Error log file=CoolTips.log
+Full-text search=Yes
+Index file=CoolTips.hhk
+Language=0x409 English (United States)
+Title=CoolTips
+
+[WINDOWS]
+default="CoolTips Help","CoolTips.hhc","CoolTips.hhk",,,,,,,0x2420,200,0x3006,[100,100,600,600],0xc40000,,1,1,,,0
+
+
+[FILES]
+html\Activate.htm
+html\AddTip.htm
+html\AddTool.htm
+html\AdjustRect.htm
+html\Contents.htm
+html\CoolTips.css
+html\DelTool.htm
+html\EnumTools.htm
+html\GetBubbleSize.htm
+html\GetCurrentTool.htm
+html\GetDelayTime.htm
+html\GetMargin.htm
+html\GetMaxTipWidth.htm
+html\GetText.htm
+html\GetTipBkColor.htm
+html\GetTipTextColor.htm
+html\GetToolCount.htm
+html\GetToolInfo.htm
+html\HitTest.htm
+html\Init.htm
+html\Introduction.htm
+html\KCR_CoolTips.htm
+html\Kill.htm
+html\NewToolRect.htm
+html\Pop.htm
+html\RelayEvent.htm
+html\SetBalloonTips.htm
+html\SetDelayTime.htm
+html\SetMargin.htm
+html\SetMaxTipWidth.htm
+html\SetTipBkColor.htm
+html\SetTipTextColor.htm
+html\SetTitle.htm
+html\SetToolInfo.htm
+html\TrackActivate.htm
+html\TrackPosition.htm
+html\Update.htm
+html\UpdateTipText.htm
+html\UpdateTipTitle.htm
+images\cooltips.gif
+images\EXCLAMATION.GIF
+images\HELPNOTE.GIF
+images\property1.gif
+images\property2.gif
+images\property3.gif
+
+[INFOTYPES]
+

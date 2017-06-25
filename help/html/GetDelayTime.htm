@@ -1,0 +1,75 @@
+<!--
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+-->
+<html><head><title>GetDelayTime</title>
+<meta name="GENERATOR" content="ForeHTML Pro 5.0">
+<link rel="stylesheet" type="text/css" href="\html\CoolTips.css">
+
+</head>
+
+<body>
+
+<p class="BannerBase">
+GetDelayTime (retrieve ToolTip delay time)</p>
+<p class="HTMLBASE">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>GetDelayTime(</b><span  style="font-size: 10pt ; ">DWORD </span><i>dwDuration</i><b>)
+</b></p>
+ <table padding="2">
+<tr valign="top"><td width="200">
+<b>GetDelayTime</b></td><td colspan="2">
+Retrieves the initial, pop-up, and reshow durations currently set for a ToolTip control.</td><td>
+ </td></tr>
+<tr valign="top"><td width="200">
+<i>dwDuration</i></td><td colspan="2">
+Flag that specifies which duration value will be retrieved. This parameter can have one of the following
+values:</td><td>
+ </td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="100">
+TTDT_AUTOPOP</td><td width="500">
+Retrieve the length of time the ToolTip window remains visible if the pointer is stationary within a tool's
+bounding rectangle.</td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="100">
+TTDT_INITIAL</td><td width="500">
+Retrieve the length of time the pointer must remain stationary within a tool's bounding rectangle before
+the ToolTip window appears.</td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="100">
+TTDT_RESHOW</td><td width="500">
+Retrieve the length of time it takes for subsequent ToolTip windows to appear as the pointer moves from
+one tool to another.</td></tr>
+<tr valign="top"><td width="200">
+Return Value</td><td colspan="2">
+Returns an <span  style=" font-variant: small-caps ;">int</span> value with the specified duration in
+milliseconds.</td><td>
+ </td></tr>
+<tr valign="top"><td width="200">
+<img src="HELPNOTE.GIF" width="48" height="24" align="baseline" alt="HELPNOTE.GIF" ></td><td colspan="2">
+Requires version 4.70 and later of Comctl32.dll</td><td>
+ </td></tr>
+<tr valign="top"><td width="200">
+See Also:</td><td colspan="2">
+<a href="\html\SetDelayTime.htm">SetDelayTime</a></td><td>
+ </td></tr></table>
+
+</body></html>

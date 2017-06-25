@@ -1,0 +1,130 @@
+[PROGRAM]
+[COMMON]
+FROM ABC ABC
+MODIFIED '2017/06/25' '17:17:20'
+[DATA]
+[SCREENCONTROLS]
+! PROMPT('s Global Tip:'),USE(?sGlobalTip:Prompt)
+! ENTRY(@s20),USE(sGlobalTip)
+[REPORTCONTROLS]
+! STRING(@s20),USE(sGlobalTip)
+sGlobalTip               STRING(20)
+!!> GUID('80d927c8-30e9-4df6-b197-1f9bdf28182e'),INITIAL('A Global String     '),PROMPT('s Global Tip:'),HEADER('s Global Tip'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('glo : sz List Tip Text:'),USE(?glo:szListTipText:Prompt)
+! TEXT,USE(glo:szListTipText)
+[REPORTCONTROLS]
+! TEXT,USE(glo:szListTipText)
+glo:szListTipText        CSTRING(512)
+!!> GUID('d4c96f5f-dabb-4649-9c57-09a5f0d455c1'),PROMPT('glo : sz List Tip Text:'),HEADER('glo : sz List Tip Text'),PICTURE(@s255)
+[SCREENCONTROLS]
+! PROMPT('glo : wsz List Tip Text:'),USE(?glo:wszListTipText:Prompt)
+! TEXT,USE(glo:wszListTipText)
+[REPORTCONTROLS]
+! TEXT,USE(glo:wszListTipText)
+glo:wszListTipText       STRING(1026)
+!!> GUID('a135df44-87aa-449d-9053-68bc3000de44'),PROMPT('glo : wsz List Tip Text:'),HEADER('glo : wsz List Tip Text'),PICTURE(@s255)
+[SCREENCONTROLS]
+! PROMPT('glo : x Pos:'),USE(?glo:xPos:Prompt)
+! ENTRY(@n-7),USE(glo:xPos),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-7),USE(glo:xPos),RIGHT(1)
+glo:xPos                 SHORT
+!!> GUID('5a283f87-0aff-4ff5-9cfe-1690bb3cdb22'),PROMPT('glo : x Pos:'),HEADER('glo : x Pos'),PICTURE(@n-7),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('glo : y Pos:'),USE(?glo:yPos:Prompt)
+! ENTRY(@n-7),USE(glo:yPos),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-7),USE(glo:yPos),RIGHT(1)
+glo:yPos                 SHORT
+!!> GUID('3c0fcebf-d657-49a4-bdca-fc5653c33b52'),PROMPT('glo : y Pos:'),HEADER('glo : y Pos'),PICTURE(@n-7),JUSTIFY(RIGHT,1)
+[SCREENCONTROLS]
+! PROMPT('glo : hwnd TT:'),USE(?glo:hwndTT:Prompt)
+! ENTRY(@n-14),USE(glo:hwndTT),RIGHT(1)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(glo:hwndTT),RIGHT(1)
+glo:hwndTT               LONG
+!!> GUID('03d87652-7e5d-47f2-9ad8-e2918a8b19a2'),PROMPT('glo : hwnd TT:'),HEADER('glo : hwnd TT'),PICTURE(@n-14),JUSTIFY(RIGHT,1)
+[EMBED]
+EMBED %GlobalMap
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 4000
+PROPERTY:END
+   MODULE('CLIB')
+      MemCpy(ulong,ulong,unsigned),name('_memcpy')
+      MemSet(ulong,ulong,unsigned),name('_memset')
+      StrCpy(ulong,ulong),name('_strcpy')
+      StrnCpy(ulong,ulong,unsigned),name('_strncpy')
+   END
+   MODULE('WINDOWS')
+      CallWindowProc(ULONG,HWND,UINT,WPARAM,LPARAM),LONG,PASCAL,NAME('CallWindowProcA')
+      GetParent(HWND),LONG,PASCAL
+      GetWindowLong(USHORT,SHORT),LONG,RAW,PASCAL,NAME('GetWindowLongA')
+      GetWindowRect(USHORT,*RECT),RAW,PASCAL,PROC
+      MultiByteToWideChar(UNSIGNED,DWORD,*CSTRING,SIGNED,ULONG,SIGNED),SIGNED,PASCAL,RAW,PROC
+      ScreenToClient(HWND, *POINT),PASCAL,RAW
+      SendMessage(UNSIGNED,UNSIGNED,UNSIGNED,LONG),LONG,PASCAL,NAME('SendMessageA'),PROC
+      SetWindowLong(HWND,SHORT,LONG),LONG,RAW,PASCAL,NAME('SetWindowLongA'),PROC
+      kcr_SetProp(HWND hwnd, *CSTRING szPropertyName, HANDLE hData),BOOL,RAW,PASCAL,PROC,NAME('SetPropA')
+      kcr_ShowWindow(HWND hWnd, LONG nCmdShow),BOOL,PASCAL,PROC,NAME('ShowWindow')
+      kcr_SetWindowPos(HWND hWnd, HWND hwndInsertAfter, ULONG x, ULONG y, ULONG cx, ULONG cy, USHORT uFlags),RAW,PASCAL,NAME('SetWindowPos')      
+   END
+[END]
+EMBED %AfterGlobalIncludes
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 3240
+PROPERTY:END
+   INCLUDE('debuger.inc'),ONCE
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 3600
+PROPERTY:END
+   INCLUDE('COOLTIPS.INC'),ONCE
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 4000
+PROPERTY:END
+RECT     GROUP,TYPE
+left        SIGNED
+top         SIGNED
+right       SIGNED
+bottom      SIGNED
+         END
+
+HWND     EQUATE(ULONG)
+GCL_HICON   EQUATE(-14)
+[END]
+EMBED %BeforeGlobalIncludes
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 4000
+PROPERTY:END
+!region Notices
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+!endregion Notices
+[END]
+[END]
+[END]

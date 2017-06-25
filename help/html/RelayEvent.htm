@@ -1,0 +1,78 @@
+<!--
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+-->
+<html><head><title>RelayEvent</title>
+<meta name="GENERATOR" content="ForeHTML Pro 5.0">
+<link rel="stylesheet" type="text/css" href="\html\CoolTips.css">
+
+</head>
+
+<body>
+
+<p class="BannerBase">
+RelayEvent (pass a mouse message to a ToolTip control for processing)</p>
+<p class="HTMLBASE">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>RelayEvent( </b><span  style="font-size: 10pt ; ">*tagMSG </span><i>msg</i><b>)
+</b></p>
+  <table padding="2">
+<tr valign="top"><td width="200">
+<b>RelayEvent</b></td><td width="600">
+Passes a mouse message to a ToolTip control for processing.</td></tr>
+<tr valign="top"><td width="200">
+<i>msg</i></td><td width="600">
+Address of an <span  style=" font-variant: small-caps ;">msg </span> structure that contains the message
+to relay.</td></tr>
+<tr valign="top"><td width="200">
+Return Value</td><td width="600">
+Returns <span  style=" font-variant: small-caps ;">true </span> if successful, or <span  style=" font-variant: small-caps ;">false
+otherwise.</span></td></tr>
+<tr valign="top"><td colspan="2">
+ </td></tr>
+<TR VALIGN="TOP"><td>
+<img src="EXCLAMATION.GIF" width="32" height="32" align="baseline" alt="EXCLAMATION.GIF" ></td><td>
+A ToolTip control processes only the following messages passed to it by the RelayEvent method:</td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+<b><span  style="font-size: 10pt ; ">WM_LBUTTONDOWN</span></b></td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+<b><span  style="font-size: 10pt ; ">WM_LBUTTONUP</span></b></td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+<b><span  style="font-size: 10pt ; ">WM_MBUTTONDOWN</span></b></td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+<b><span  style="font-size: 10pt ; ">WM_MBUTTONUP</span></b></td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+<b><span  style="font-size: 10pt ; ">WM_MOUSEMOVE</span></b></td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+<b><span  style="font-size: 10pt ; ">WM_RBUTTONDOWN</span></b></td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+<b><span  style="font-size: 10pt ; ">WM_RBUTTONUP</span></b></td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+<span  style=" font-variant: small-caps ;">all other messages are ignored.</span></td></tr></table>
+
+</body></html>

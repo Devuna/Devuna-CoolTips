@@ -1,0 +1,53 @@
+<!--
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+-->
+<html><head><title>GetCurrentTool</title>
+<meta name="GENERATOR" content="ForeHTML Pro 5.0">
+<link rel="stylesheet" type="text/css" href="\html\CoolTips.css">
+
+</head>
+
+<body>
+
+<p class="BannerBase">
+GetCurrentTool (retrieves information for the current tool in a ToolTip control)</p>
+<p class="HTMLBASE">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>GetCurrentTool(</b><span  style="font-size: 10pt ; ">*tagTOOLINFO </span><i>ti</i><b>)
+</b></p>
+ <table padding="2">
+<tr valign="top"><td width="200">
+<b>GetCurrentTool</b></td><td width="600">
+Retrieves the information for the current tool in a ToolTip control.</td></tr>
+<tr valign="top"><td width="200">
+<i>ti</i></td><td width="600">
+Address of a <span  style=" font-variant: small-caps ;">toolinfo</span> structure that receives information
+about the current tool. If this value is <span  style=" font-variant: small-caps ;">null</span>, the return
+value indicates the existence of the current tool without actually retrieving the tool information. If
+this value is not <span  style=" font-variant: small-caps ;">null</span>, the <b>cbSize</b> member of
+the <span  style=" font-variant: small-caps ;">toolinfo</span> structure must be filled in before sending
+this message.</td></tr>
+<tr valign="top"><td width="200">
+Return Value</td><td width="600">
+Returns nonzero if successful, or zero otherwise. If <i>ti</i> is <span  style=" font-variant: small-caps ;">null</span>,
+returns nonzero if a current tool exists, or zero otherwise.</td></tr></table>
+
+</body></html>

@@ -1,0 +1,58 @@
+<!--
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+-->
+<html><head><title>HitTest</title>
+<meta name="GENERATOR" content="ForeHTML Pro 5.0">
+<link rel="stylesheet" type="text/css" href="\html\CoolTips.css">
+
+</head>
+
+<body>
+
+<p class="BannerBase">
+HitTest (test point to see if in bounding rectangle of tool)</p>
+<p class="HTMLBASE">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>HitTest(</b><span  style="font-size: 10pt ; ">HWND </span><i>hwndControl</i>,
+<span  style="font-size: 10pt ; ">*tagPOINT </span><i>pt</i>, <span  style="font-size: 10pt ; ">*tagTOOLINFO
+</span><i>ti</i><b>) </b></p>
+ <table padding="2">
+<tr valign="top"><td width="200">
+<b>HitTest</b></td><td width="600">
+Tests a point to determine whether it is within the bounding rectangle of the specified tool and, if it
+is, retrieves information about the tool.</td></tr>
+<tr valign="top"><td width="200">
+<i>hwndControl</i></td><td width="600">
+This is the {prop:handle} for the window control that is associated with the tip.</td></tr>
+<tr valign="top"><td width="200">
+<i>pt</i></td><td width="600">
+Address of a <span  style=" font-variant: small-caps ;">point</span> structure. This parameter needs to
+be initialized to the point in question.</td></tr>
+<tr valign="top"><td width="200">
+<i>ti</i></td><td width="600">
+Address of a <span  style=" font-variant: small-caps ;">toolinfo</span> structure that receives information
+about the tool.</td></tr>
+<tr valign="top"><td width="200">
+Return Value</td><td width="600">
+Returns <span  style=" font-variant: small-caps ;">true</span> if the tool occupies the specified point,
+or <span  style=" font-variant: small-caps ;">false </span>otherwise.</td></tr></table>
+
+</body></html>

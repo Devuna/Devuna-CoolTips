@@ -1,0 +1,82 @@
+<!--
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+-->
+<html><head><title>AddTip</title>
+<meta name="GENERATOR" content="ForeHTML Pro 5.0">
+<link rel="stylesheet" type="text/css" href="\html\CoolTips.css">
+
+</head>
+
+<body>
+
+<p class="BannerBase">
+AddTip (create a cooltips control)</p>
+<p class="HTMLBASE">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>AddTip(</b><span  style="font-size: 10pt ; ">HWND </span><i>hwndControl</i>,
+<span  style="font-size: 10pt ; ">STRING </span><i>sTip</i>, <span  style="font-size: 10pt ; ">BOOL </span><i>bMultiline</i>=0,
+<span  style="font-size: 10pt ; ">STRING </span><i>sTitle</i>, <span  style="font-size: 10pt ; ">LONG
+</span><i>nIcon</i>, <span  style="font-size: 10pt ; ">STRING </span><i>sFont</i>, <span  style="font-size: 10pt ; ">BYTE
+</span><i>nFontSize</i><b>)</b></p>
+ <table padding="2">
+<tr valign="top"><td width="200">
+<b>AddTip</b></td><td width="600">
+Creates a CoolTips control.</td></tr>
+<tr valign="top"><td width="200">
+<i>hwndControl</i></td><td width="600">
+This is the {prop:handle} for the window control that is to be associated with the tip.</td></tr>
+<tr valign="top"><td width="200">
+<i>sTip</i></td><td width="600">
+Specifies the tip text.</td></tr>
+<tr valign="top"><td width="200">
+<i>bMultiline</i></td><td width="600">
+If <span  style=" font-variant: small-caps ;">true, crlf </span>is used to delimit multiple lines of text.
+If <span  style=" font-variant: small-caps ;">false</span>, all text is displayed in one line.</td></tr>
+<tr valign="top"><td width="200">
+<i>sTitle</i></td><td width="600">
+Specifies the Tip Title. The Tip Title is shown in bold at the top of the tip.</td></tr>
+<tr valign="top"><td width="200">
+<i>nIcon</i></td><td width="600">
+Icon Number:</td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+0 = None</td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+1 = Info</td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+2 = Warning</td></tr>
+<tr valign="top"><td width="200">
+ </td><td width="600">
+3 = Error</td></tr>
+<tr valign="top"><td width="200">
+<i>sFont</i></td><td width="600">
+Specifies the name of the font to be used for the tip</td></tr>
+<tr valign="top"><td width="200">
+<i>nFontSize</i></td><td width="600">
+Specifies the point size for the Tip font. Must be in the rang 6 - 24.</td></tr>
+<tr valign="top"><td width="200">
+Returns</td><td width="600">
+<span  style=" font-variant: small-caps ;">true</span> if successful,or <span  style=" font-variant: small-caps ;">false
+</span>otherwise.</td></tr></table>
+
+</body></html>
