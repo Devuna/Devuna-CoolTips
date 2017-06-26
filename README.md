@@ -7,7 +7,7 @@ Distributed under [GPL 3.0](http://www.gnu.org/licenses/gpl-3.0.txt "GPL 3.0")
 
 ## Overview ##
 
-There are two templates included in the Queue Edit in Place Template set:
+There are two templates included in the CoolTips Template set:
 
 1. KCR_GlobalCoolTips - *Application* EXTENSION template adds CoolTip to all procedures. This is not required, you may select each and every one procedure too. 
 2. KCR_CoolTip - *Procedure* EXTENSION template to enable CoolTips for the procedure.
