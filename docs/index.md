@@ -8,6 +8,8 @@ Distributed under [GPL 3.0](http://www.gnu.org/licenses/gpl-3.0.txt "GPL 3.0")
 ## Overview ##
 CoolTips consists of a class wrapper for the Microsoft tooltip common control [comctl32.dll] which provides tooltips for the controls on a window. And, a template set to  make it easy to add balloon tooltips and tooltips on regions.
 
+The **setup** folder contains the ***CoolTipsSetup.exe*** program for installing CoolTips for Clarion Version 10.  The **SetupBuilder** subfolder contains the [**SetupBuilder®**](http://www.lindersoft.com/products_setupbuilder_dev.htm) install project used to create ***CoolTipsSetup.exe***  
+
 ## Templates ##
 
 There are two templates included in the CoolTips Template set:

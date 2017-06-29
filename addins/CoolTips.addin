@@ -1,0 +1,15 @@
+<AddIn name="Cool Tips" author="Devuna" url="http://www.devuna.com" description="Cool Tips Accessory Menu Addin">
+   <Manifest>
+      <Identity name="CoolTips.addin" version="1.0" />
+      <Dependency addin="SharpDevelop" version="2.1" />
+      <Dependency addin="Devuna.Addin" />
+   </Manifest>
+   <Path name="/SharpDevelop/Workbench/MainMenu/Help/Accessory/Devuna">
+      <MenuItem id="CoolTipsHelp" 
+      		label="Cool Tips" 
+      		icon="Icons.16x16.HelpIcon" 
+      		insertafter="DevunaSeparator" 
+      		link="home://accessory/Documents/Devuna/Cool Tips/CoolTips.chm">
+      </MenuItem>
+   </Path>
+</AddIn>

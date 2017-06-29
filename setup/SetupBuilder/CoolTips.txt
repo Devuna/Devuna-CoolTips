@@ -1,0 +1,181 @@
+! //////////////////////////////////////////////////////////////////////////////////////////////////
+! //
+! // Notice : Copyright (C) 2017, Devuna
+! //          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+! //
+! //    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+! //
+! //    Devuna-CoolTips is free software: you can redistribute it and/or modify
+! //    it under the terms of the GNU General Public License as published by
+! //    the Free Software Foundation, either version 3 of the License, or
+! //    (at your option) any later version.
+! //
+! //    Devuna-CoolTips is distributed in the hope that it will be useful,
+! //    but WITHOUT ANY WARRANTY; without even the implied warranty of
+! //    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! //    GNU General Public License for more details.
+! //
+! //    You should have received a copy of the GNU General Public License
+! //    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! //
+! //////////////////////////////////////////////////////////////////////////////////////////////////
+! //
+! //   SSSS S  BBBBBB
+! //  S    SS   B    B
+! //  S     S   B    B
+! //  S         B    B
+! //   SSS      BBBBB         SetupBuilder 10 Install Project Script
+! //      SS    B    B
+! //        S   B    B        Created with build: 10.0.5452
+! //  S     S   B    B
+! //  SS    S   B    B
+! //  S SSSS   BBBBBB
+! //
+! //////////////////////////////////////////////////////////////////////////////////////////////////
+  
+[ Support Files ]
+! --- Required temporary installation files ---
+  
+  
+[ Billboards ]
+! --- Billboard files ---
+  
+  
+[ Initialize Setup ]
+! --- Define commonly used constants ---
+#include script "Common Definitions.sbi"
+  
+! Important: Initialize default install folder and program group variables
+Set Variable %_SB_INSTALLDIR% to "[INSTALLDIR]"
+Set Variable %_SB_PROGRAMGROUP% to "[PRODUCTNAME]"
+  
+! %_SB_BACKUPDIR% holds the path that all backup files will be copied to when overwritten
+Set Variable %_SB_BACKUPDIR% to "%_SB_INSTALLDIR%\BACKUP"
+  
+  
+[ Features ]
+! If features are enabled, %_SB_FEATURESID% holds all selections separated by a vertical bar "|"
+! Warning: It is not recommended to manually modify the %_SB_FEATURESID% variable!
+  
+  
+[ Setup Types ]
+! If setup types are enabled, %_SB_SETUPTYPEID% holds the selected type
+! Warning: It is not recommended to manually modify the %_SB_SETUPTYPEID% variable!
+  
+::Define Setup Type ("Typical")
+::Define Setup Type ("Minimal")
+::Define Setup Type ("Custom") [Custom Type]
+  
+[ User Interface ]
+! Wizard dialog definition(s)
+Define Wizard Dialog "#1" (Welcome)
+Define Wizard Dialog "CLARIONDETECTION" (<unknown dialog type>) (%_SB_INSTALLDIR%) [C100]
+Define Wizard Dialog "#3" (License Agreement)
+Define Wizard Dialog "#4" (Select Install Folder) (%_SB_INSTALLDIR%)
+Define Wizard Dialog "#5" (Ready to Install) ()
+  
+! The Wizard Loop displays the dialog screens that the user sees in the installation
+Loop Wizard (Abort Dialog Active)
+End
+  
+! Display progress dialog
+Progress Dialog: Display ()
+  
+! Create installation .log
+Create Installation App & Log ("[UNINSTALL_LOG]")
+  
+[ Create Folders ]
+  
+::Create Folder "%_SB_INSTALLDIR%\accessory" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\addins" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\addins\Devuna" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\bin" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\documents" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\documents\Devuna" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\documents\Devuna\CoolTips" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\images" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\lib" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\libsrc" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\libsrc\win" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\template" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\template\win" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\vendor" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\vendor\Devuna" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents" [Feature:Always Install]
+::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents\CoolTips" [Feature:Always Install]
+  
+[ Install Files ]
+  
+Install File(s) "C:\GitHub\Devuna-CoolTips\addins\AccessoryMenu.addin" to "%_SB_INSTALLDIR%\accessory\addins\AccessoryMenu.addin" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\addins\Devuna.addin" to "%_SB_INSTALLDIR%\accessory\addins\Devuna.addin" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\CoolDemo.app" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\CoolDemo.app" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\CoolDemo.cwproj" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\CoolDemo.cwproj" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\CoolDemo.ico" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\CoolDemo.ico" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\CoolDemo.sln" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\CoolDemo.sln" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\down.ico" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\down.ico" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\left.ico" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\left.ico" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\randy.jpg" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\randy.jpg" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\right.ico" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\right.ico" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\up.ico" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips\up.ico" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\LICENSE" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents\CoolTips\LICENSE" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\vendor\Devuna Examples.lnk" to "%_SB_INSTALLDIR%\accessory\vendor\Devuna\Devuna Examples.lnk" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\template\win\CoolTips.ico" to "%_SB_INSTALLDIR%\accessory\template\win\CoolTips.ico" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\template\win\cooltips.tpl" to "%_SB_INSTALLDIR%\accessory\template\win\cooltips.tpl" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\images\CoolTips.ico" to "%_SB_INSTALLDIR%\accessory\images\CoolTips.ico" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\addins\CoolTips.addin" to "%_SB_INSTALLDIR%\accessory\addins\Devuna\CoolTips.addin" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\template\win\cwcooltips.tpl" to "%_SB_INSTALLDIR%\accessory\template\win\cwcooltips.tpl" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\help\CoolTips.chm" to "%_SB_INSTALLDIR%\accessory\documents\Devuna\CoolTips\CoolTips.chm" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\help\CoolTips.chm" to "%_SB_INSTALLDIR%\accessory\documents\Devuna\Cool Tips\CoolTips.chm" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\libsrc\win\cooltips.clw" to "%_SB_INSTALLDIR%\accessory\libsrc\win\cooltips.clw" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\libsrc\win\cooltips.inc" to "%_SB_INSTALLDIR%\accessory\libsrc\win\cooltips.inc" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\libsrc\win\ttutillib.c" to "%_SB_INSTALLDIR%\accessory\libsrc\win\ttutillib.c" [Feature:Always Install]
+  
+[ Create Shortcuts ]
+  
+::Create Program Folder "Clarion 10.0 Accessories" in "Programs\Clarion 10.0 Accessories" [Feature:Always Install]
+::Create Program Folder "Devuna" in "Programs\Clarion 10.0 Accessories\Devuna" [Feature:Always Install]
+::Create Program Folder "CoolTips" in "Programs\Clarion 10.0 Accessories\Devuna\CoolTips" [Feature:Always Install]
+::Create Shortcut "Uninstall Cool Tips" in "Programs\Clarion 10.0 Accessories\Devuna\CoolTips\Uninstall Cool Tips" [Feature:Always Install]
+::Create Shortcut "Documents" in "Programs\Clarion 10.0 Accessories\Devuna\CoolTips\Documents" [Feature:Always Install]
+::Create Shortcut "Example" in "Programs\Clarion 10.0 Accessories\Devuna\CoolTips\Example" [Feature:Always Install]
+::Create Shortcut "Help" in "Programs\Clarion 10.0 Accessories\Devuna\CoolTips\Help" [Feature:Always Install]
+  
+[ Edit Registry ]
+  
+  
+[ Edit INI Files ]
+  
+Set Variable %CURRENTDATE% to FUNCTION:Get System Info (Current Date, Format: "12")
+Put INI Value ("Devuna Accessories", "CoolTipsInstall = 10") to "%_SB_INSTALLDIR%\accessory\DevunaAccessories.ini"
+Put INI Value ("Devuna Accessories", "CoolTipsInstalledDate = %CURRENTDATE%") to "%_SB_INSTALLDIR%\accessory\DevunaAccessories.ini"
+  
+  
+[ Modify System ]
+  
+  
+[ Execute Programs ]
+  
+  
+[ Finalize Setup ]
+! Register all queued pending file operations
+Register all pending file operations ()
+  
+! Register templates for Clarion 10
+Progress Dialog: Set Status Text #1 to "Registering C10 templates.  Please Wait..."
+Register all pending Clarion Templates in "%_SB_INSTALLDIR%\bin\Clarion.exe"
+  
+[ Final User Interface ]
+! Final wizard dialog definition(s)
+Define Wizard Dialog "#1" (Finish) ()
+  
+! The Wizard Loop displays the dialog screens that the user sees in the installation
+Loop Wizard (Abort Dialog Active)
+End
+  
