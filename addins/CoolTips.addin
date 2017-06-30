@@ -9,7 +9,7 @@
       		label="Cool Tips" 
       		icon="Icons.16x16.HelpIcon" 
       		insertafter="DevunaSeparator" 
-      		link="home://accessory/Documents/Devuna/Cool Tips/CoolTips.chm">
+      		link="home://accessory/Documents/Devuna/CoolTips/CoolTips.chm">
       </MenuItem>
    </Path>
 </AddIn>
