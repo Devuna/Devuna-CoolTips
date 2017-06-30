@@ -1,7 +1,7 @@
 [MODULE]
 [COMMON]
 FROM ABC GENERATED
-MODIFIED '2017/06/25' '17:17:55'
+MODIFIED '2017/06/30' '12:33:40'
 [DATA]
 [SCREENCONTROLS]
 ! ENTRY(@n-14),USE(ToolTip::OrigWndProc)
@@ -24,11 +24,6 @@ Main::OrigClientWndProc  LONG,THREAD
 [EMBED]
 EMBED %ModuleDataSection
 [DEFINITION]
-[SOURCE]
-PROPERTY:BEGIN
-PRIORITY 3600
-PROPERTY:END
-dbx   debuger
 [SOURCE]
 PROPERTY:BEGIN
 PRIORITY 4000
@@ -72,7 +67,7 @@ PROPERTY:END
 NAME Main
 [COMMON]
 FROM ABC Window
-MODIFIED '2017/06/25' '18:07:33'
+MODIFIED '2017/06/30' '12:31:38'
 [DATA]
 [SCREENCONTROLS]
 ! PROMPT('Files Opened:'),USE(?FilesOpened:Prompt)
@@ -230,8 +225,7 @@ WHEN  ('WindowToolbar')TIMES 0
 
 %ClassDataDim4 DEPEND %ClassPropertyItems DEFAULT TIMES 0
 
-%ButtonAction DEPEND %Control DEFAULT TIMES 16
-WHEN  ('') ('No Special Action')
+%ButtonAction DEPEND %Control DEFAULT TIMES 15
 WHEN  ('?Button2') ('No Special Action')
 WHEN  ('?Button3') ('No Special Action')
 WHEN  ('?Button4') ('No Special Action')
@@ -264,8 +258,7 @@ WHEN  ('?CloseButton') ()
 WHEN  ('?Button2') (0)
 WHEN  ('?CloseButton') (0)
 
-%ButtonThreadStack DEPEND %Control DEFAULT TIMES 16
-WHEN  ('') ('25000')
+%ButtonThreadStack DEPEND %Control DEFAULT TIMES 15
 WHEN  ('?Button2') ('25000')
 WHEN  ('?Button3') ('25000')
 WHEN  ('?Button4') ('25000')
@@ -294,8 +287,7 @@ WHEN  ('?CloseButton') ()
 WHEN  ('?Button2') (0)
 WHEN  ('?CloseButton') (0)
 
-%ButtonRequest DEPEND %Control DEFAULT TIMES 16
-WHEN  ('') ('None')
+%ButtonRequest DEPEND %Control DEFAULT TIMES 15
 WHEN  ('?Button2') ('None')
 WHEN  ('?Button3') ('None')
 WHEN  ('?Button4') ('None')
@@ -332,8 +324,7 @@ WHEN  ('?CloseButton') ()
 
 %PostLookupProcedure DEPEND %Control PROCEDURE TIMES 0
 
-%PostLookupDuringValidate DEPEND %Control LONG TIMES 15
-WHEN  ('') (1)
+%PostLookupDuringValidate DEPEND %Control LONG TIMES 14
 WHEN  ('?Button2') (1)
 WHEN  ('?Button4') (1)
 WHEN  ('?CloseButton') (1)
@@ -367,8 +358,7 @@ WHEN  ('?String1') (1)
 
 %CheckedControl DEPEND %CheckedHides DEFAULT TIMES 0
 
-%CheckedControlAction DEPEND %CheckedHides DEFAULT TIMES 15
-WHEN  ('')TIMES 0
+%CheckedControlAction DEPEND %CheckedHides DEFAULT TIMES 14
 WHEN  ('?Button2')TIMES 0
 WHEN  ('?Button4')TIMES 0
 WHEN  ('?CloseButton')TIMES 0
@@ -388,8 +378,7 @@ WHEN  ('?String1')TIMES 0
 
 %CheckedControl1 DEPEND %CheckedEnables DEFAULT TIMES 0
 
-%CheckedControl1Action DEPEND %CheckedEnables DEFAULT TIMES 15
-WHEN  ('')TIMES 0
+%CheckedControl1Action DEPEND %CheckedEnables DEFAULT TIMES 14
 WHEN  ('?Button2')TIMES 0
 WHEN  ('?Button4')TIMES 0
 WHEN  ('?CloseButton')TIMES 0
@@ -415,8 +404,7 @@ WHEN  ('?String1')TIMES 0
 
 %UnCheckedControl DEPEND %UnCheckedHides DEFAULT TIMES 0
 
-%UnCheckedControlAction DEPEND %UnCheckedHides DEFAULT TIMES 15
-WHEN  ('')TIMES 0
+%UnCheckedControlAction DEPEND %UnCheckedHides DEFAULT TIMES 14
 WHEN  ('?Button2')TIMES 0
 WHEN  ('?Button4')TIMES 0
 WHEN  ('?CloseButton')TIMES 0
@@ -436,8 +424,7 @@ WHEN  ('?String1')TIMES 0
 
 %UnCheckedControl1 DEPEND %UnCheckedEnables DEFAULT TIMES 0
 
-%UnCheckedControl1Action DEPEND %UnCheckedEnables DEFAULT TIMES 15
-WHEN  ('')TIMES 0
+%UnCheckedControl1Action DEPEND %UnCheckedEnables DEFAULT TIMES 14
 WHEN  ('?Button2')TIMES 0
 WHEN  ('?Button4')TIMES 0
 WHEN  ('?CloseButton')TIMES 0
@@ -558,57 +545,47 @@ WHEN  ('WindowToolbar') ('NO')
 
 %ExtUITabStyleOverrideGlobal DEPEND %Control LONG TIMES 0
 
-%ExtUITabStyle DEPEND %Control DEFAULT TIMES 2
-WHEN  ('') ('Default')
+%ExtUITabStyle DEPEND %Control DEFAULT TIMES 1
 WHEN  ('?DynamicRegionString') ('Default')
 
 %CheckedDisables DEPEND %Control MULTI LONG TIMES 0
 
 %CheckedDisableControl DEPEND %CheckedDisables DEFAULT TIMES 0
 
-%CheckedDisableControlAction DEPEND %CheckedDisables DEFAULT TIMES 2
-WHEN  ('')TIMES 0
+%CheckedDisableControlAction DEPEND %CheckedDisables DEFAULT TIMES 1
 WHEN  ('?DynamicRegionString')TIMES 0
 
 %UnCheckedDisables DEPEND %Control MULTI LONG TIMES 0
 
 %UnCheckedDisableControl DEPEND %UnCheckedDisables DEFAULT TIMES 0
 
-%UnCheckedDisableControlAction DEPEND %UnCheckedDisables DEFAULT TIMES 2
-WHEN  ('')TIMES 0
+%UnCheckedDisableControlAction DEPEND %UnCheckedDisables DEFAULT TIMES 1
 WHEN  ('?DynamicRegionString')TIMES 0
 
 %ProcedureOneInstance LONG  (0)
-%FieldGradientColorType DEPEND %Control DEFAULT TIMES 2
-WHEN  ('') ('Off')
+%FieldGradientColorType DEPEND %Control DEFAULT TIMES 1
 WHEN  ('?DynamicRegionString') ('Off')
 
-%FieldGradientColorTypeVariable DEPEND %Control DEFAULT TIMES 2
-WHEN  ('') ('')
+%FieldGradientColorTypeVariable DEPEND %Control DEFAULT TIMES 1
 WHEN  ('?DynamicRegionString') ('')
 
-%FieldGradientColorTypeIsVariable DEPEND %Control LONG TIMES 2
-WHEN  ('') (0)
+%FieldGradientColorTypeIsVariable DEPEND %Control LONG TIMES 1
 WHEN  ('?DynamicRegionString') (0)
 
-%FieldGradientColorFrom DEPEND %Control LONG TIMES 2
-WHEN  ('') (-1)
+%FieldGradientColorFrom DEPEND %Control LONG TIMES 1
 WHEN  ('?DynamicRegionString') (-1)
 
 %FieldGradientColorFromVariable DEPEND %Control DEFAULT TIMES 0
 
-%FieldGradientColorFromIsVariable DEPEND %Control LONG TIMES 2
-WHEN  ('') (0)
+%FieldGradientColorFromIsVariable DEPEND %Control LONG TIMES 1
 WHEN  ('?DynamicRegionString') (0)
 
-%FieldGradientColorTo DEPEND %Control LONG TIMES 2
-WHEN  ('') (-1)
+%FieldGradientColorTo DEPEND %Control LONG TIMES 1
 WHEN  ('?DynamicRegionString') (-1)
 
 %FieldGradientColorToVariable DEPEND %Control DEFAULT TIMES 0
 
-%FieldGradientColorToIsVariable DEPEND %Control LONG TIMES 2
-WHEN  ('') (0)
+%FieldGradientColorToIsVariable DEPEND %Control LONG TIMES 1
 WHEN  ('?DynamicRegionString') (0)
 
 %PreserveVarsLoc MULTI LONG  ()
@@ -616,24 +593,21 @@ WHEN  ('?DynamicRegionString') (0)
 
 %ActiveImageEnable DEPEND %Control LONG TIMES 0
 
-%AIObjectName DEPEND %Control DEFAULT TIMES 6
-WHEN  ('') ('AIBtn0')
+%AIObjectName DEPEND %Control DEFAULT TIMES 5
 WHEN  ('?Image1') ('AIBtn4')
 WHEN  ('?Image2') ('AIBtn2')
 WHEN  ('?Image3') ('AIBtn3')
 WHEN  ('?Image4') ('AIBtn1')
 WHEN  ('?Image5') ('AIBtn9')
 
-%AIEnableMimicControl DEPEND %Control LONG TIMES 6
-WHEN  ('') (1)
+%AIEnableMimicControl DEPEND %Control LONG TIMES 5
 WHEN  ('?Image1') (1)
 WHEN  ('?Image2') (1)
 WHEN  ('?Image3') (1)
 WHEN  ('?Image4') (1)
 WHEN  ('?Image5') (1)
 
-%AIMimicControl DEPEND %Control DEFAULT TIMES 6
-WHEN  ('') ('?Image4')
+%AIMimicControl DEPEND %Control DEFAULT TIMES 5
 WHEN  ('?Image1') ('?Image4')
 WHEN  ('?Image2') ('?Image4')
 WHEN  ('?Image3') ('?Image4')
@@ -646,8 +620,7 @@ WHEN  ('?Image5') ('?Image4')
 
 %AIOverrideImgVariable DEPEND %Control DEFAULT TIMES 0
 
-%AIOverrideImgIsVariable DEPEND %Control LONG TIMES 6
-WHEN  ('') (0)
+%AIOverrideImgIsVariable DEPEND %Control LONG TIMES 5
 WHEN  ('?Image1') (0)
 WHEN  ('?Image2') (0)
 WHEN  ('?Image3') (0)
@@ -658,8 +631,7 @@ WHEN  ('?Image5') (0)
 
 %AIDisableImgVariable DEPEND %Control DEFAULT TIMES 0
 
-%AIDisableImgIsVariable DEPEND %Control LONG TIMES 6
-WHEN  ('') (0)
+%AIDisableImgIsVariable DEPEND %Control LONG TIMES 5
 WHEN  ('?Image1') (0)
 WHEN  ('?Image2') (0)
 WHEN  ('?Image3') (0)
@@ -670,8 +642,7 @@ WHEN  ('?Image5') (0)
 
 %AIHotImgVariable DEPEND %Control DEFAULT TIMES 0
 
-%AIHotImgIsVariable DEPEND %Control LONG TIMES 6
-WHEN  ('') (0)
+%AIHotImgIsVariable DEPEND %Control LONG TIMES 5
 WHEN  ('?Image1') (0)
 WHEN  ('?Image2') (0)
 WHEN  ('?Image3') (0)
@@ -682,8 +653,7 @@ WHEN  ('?Image5') (0)
 
 %AIPressedImgVariable DEPEND %Control DEFAULT TIMES 0
 
-%AIPressedImgIsVariable DEPEND %Control LONG TIMES 6
-WHEN  ('') (0)
+%AIPressedImgIsVariable DEPEND %Control LONG TIMES 5
 WHEN  ('?Image1') (0)
 WHEN  ('?Image2') (0)
 WHEN  ('?Image3') (0)
@@ -795,13 +765,6 @@ WHEN '(),BYTE'
 [DEFINITION]
 [SOURCE]
 PROPERTY:BEGIN
-PRIORITY 300
-PROPERTY:END
-COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-dbx.mg_init('demo')  
-!ENDCOMPILE
-[SOURCE]
-PROPERTY:BEGIN
 PRIORITY 8150
 PROPERTY:END
 List1::OrigWndProc = ?List1{Prop:WndProc}                 ! Save address of code that handles window messages
@@ -891,13 +854,6 @@ END
 IF Main::OrigClientWndProc
    Window{Prop:ClientWndProc} = Main::OrigClientWndProc   ! Restore the handler for this client window
 END
-[SOURCE]
-PROPERTY:BEGIN
-PRIORITY 9800
-PROPERTY:END
-COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-dbx.kill()
-!ENDCOMPILE
 [END]
 [END]
 [END]
@@ -1016,28 +972,14 @@ ti              LIKE(tagTOOLINFO)
            memcpy(ADDRESS(_nmhdr),lParam,SIZE(_nmhdr))
            CASE _nmhdr.code
              OF TTN_POP
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.Debugout('Main::ClientWndProc TTN_POP ' & _nmhdr.idfrom)
-                !ENDCOMPILE
 
              OF TTN_SHOW
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.Debugout('Main::ClientWndProc TTN_SHOW ' & _nmhdr.idfrom)
-                !ENDCOMPILE
 
              OF TTN_GETDISPINFO
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.Debugout('Main::ClientWndProc TTN_GETDISPINFO ' & _nmhdr.idfrom)
-                !ENDCOMPILE
 
              OF TTN_GETDISPINFOW
                 !reference the NMTTDISPINFO structure
                 memcpy(ADDRESS(ttd),lParam,SIZE(ttd))
-
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.Debugout('Main::ClientWndProc TTN_GETDISPINFOW ' & ttd.hdr.idfrom)
-                !ENDCOMPILE
-
                 IF ttd.hdr.idFrom = 123
                    ttd.lpszText = ADDRESS(glo:wszListTipText)
                    memcpy(lParam,ADDRESS(ttd),SIZE(ttd))
@@ -1091,10 +1033,6 @@ tipPos          LONG
            memcpy(ADDRESS(_nmhdr),lParam,SIZE(_nmhdr))
            CASE _nmhdr.code
              OF TTN_POP
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.debugout('List1::WndProc TTN_POP ' & _nmhdr.hwndFrom)
-                !ENDCOMPILE
-
                 hwndTT = GetWindowLong(hWnd,GWL_USERDATA)
                 IF hWndTT
                    memset(ADDRESS(ti),00h,SIZE(ti))
@@ -1107,10 +1045,6 @@ tipPos          LONG
                 RETURN FALSE
 
              OF TTN_SHOW
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.debugout('List1::WndProc TTN_SHOW ' & _nmhdr.hwndFrom)
-                !ENDCOMPILE
-
                 hwndTT = GetWindowLong(hWnd,GWL_USERDATA)
                 IF hWndTT
                    memset(ADDRESS(ti),00h,SIZE(ti))
@@ -1125,10 +1059,6 @@ tipPos          LONG
                 RETURN FALSE
 
              OF TTN_GETDISPINFO
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.debugout('List1::WndProc TTN_GETDISPINFO ' & _nmhdr.hwndFrom)
-                !ENDCOMPILE
-                
                 !Hook the Clarion Tooltip Window WndProc
                 IF ToolTip::OrigWndProc = 0
                    ToolTip::OrigWndProc = GetWindowLong(_nmhdr.hwndFrom,GWL_WNDPROC)
@@ -1160,9 +1090,6 @@ PRIORITY 8500
 PROPERTY:END
 ToolTip::WndProc PROCEDURE(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
    CODE
-      COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-      dbx.Debugout('ToolTip::WndProc ' & dbx.GetEventDescr_WM(wMsg) & ', ' & wParam & ',' & lParam)
-      !ENDCOMPILE
       CASE wMsg
         OF WM_SHOWWINDOW
            RETURN 1

@@ -6,135 +6,6 @@ PROCEDURE Main
 FROM ABC
 MODIFIED '2014/04/02' '13:21:31'
 [PROMPTS]
-%ProgramAuthor DEFAULT  ('Randy Rogers')
-%MessageDescription LONG  (1)
-%GlobalExternal LONG  (0)
-%ExternalSource DEFAULT  ('Dynamic Link Library (DLL)')
-%GenerateEmbedComments LONG  (0)
-%INIActive LONG  (0)
-%INIFile DEFAULT  ('Program Name.INI')
-%ININame DEFAULT  ('')
-%PreserveVars MULTI LONG  ()
-%PreserveVar DEPEND %PreserveVars DEFAULT TIMES 0
-
-%EnableRunTimeTranslator LONG  (0)
-%DefaultGenerate LONG  (0)
-%DefaultRILogout LONG  (1)
-%GlobalUseDefaultFileManager LONG  (1)
-%GlobalFileManagerClass DEFAULT  ('')
-%GlobalUseDefaultRelationManager LONG  (1)
-%GlobalRelationManagerClass DEFAULT  ('')
-%LockRecoverTime DEFAULT  ('10')
-%DefaultThreaded DEFAULT  ('Use File Setting')
-%DefaultCreate DEFAULT  ('Use File Setting')
-%DefaultExternal DEFAULT  ('None External')
-%DefaultExternalSource DEFAULT  ('')
-%DefaultExternalAPP LONG  (0)
-%DefaultExport LONG  (0)
-%DefaultOpenMode DEFAULT  ('Share')
-%DefaultUserAccess DEFAULT  ('Read/Write')
-%DefaultOtherAccess DEFAULT  ('Deny None')
-%DefaultLazyOpen LONG  (1)
-%OverrideGenerate DEPEND %File LONG TIMES 0
-
-%OverrideRILogout DEPEND %File DEFAULT TIMES 1
-WHEN  ('') ('Use Default')
-
-%OverrideUseDefaultFileManager DEPEND %File LONG TIMES 0
-
-%OverrideFileManagerClass DEPEND %File DEFAULT TIMES 0
-
-%OverrideUseDefaultRelationManager DEPEND %File LONG TIMES 0
-
-%OverrideRelationManagerClass DEPEND %File DEFAULT TIMES 0
-
-%OverrideThreaded DEPEND %File DEFAULT TIMES 1
-WHEN  ('') ('Use Default')
-
-%OverrideCreate DEPEND %File DEFAULT TIMES 1
-WHEN  ('') ('Use Default')
-
-%OverrideExternal DEPEND %File DEFAULT TIMES 1
-WHEN  ('') ('Use Default')
-
-%OverrideExternalSource DEPEND %File DEFAULT TIMES 0
-
-%OverrideExternalAPP DEPEND %File LONG TIMES 0
-
-%OverrideExport DEPEND %File LONG TIMES 0
-
-%OverrideOpenMode DEPEND %File DEFAULT TIMES 1
-WHEN  ('') ('Use Default')
-
-%OverrideUserAccess DEPEND %File DEFAULT TIMES 1
-WHEN  ('') ('Use Default')
-
-%OverrideOtherAccess DEPEND %File DEFAULT TIMES 1
-WHEN  ('') ('Use Default')
-
-%OverrideLazyOpen DEPEND %File DEFAULT TIMES 1
-WHEN  ('') ('Use Default')
-
-%StandardExternalModule DEPEND %Module LONG TIMES 4
-WHEN  ('') (1)
-WHEN  ('CoolDemo.clw') (1)
-WHEN  ('CoolDemo001.clw') (1)
-WHEN  ('cooldemo.clw') (1)
-
-%WindowManagerType DEFAULT  ('WindowManager')
-%ResetOnGainFocus LONG  (0)
-%AutoToolbar LONG  (1)
-%AutoRefresh LONG  (1)
-%ErrorManagerType DEFAULT  ('ErrorClass')
-%PopupClass DEFAULT  ('PopupClass')
-%SelectFileClass DEFAULT  ('SelectFileClass')
-%ResizerType DEFAULT  ('WindowResizeClass')
-%ResizerDeFaultFindParents LONG  (1)
-%ResizerDefaultOptimizeMoves LONG  (1)
-%ResizerDefaultOptimizeRedraws LONG  (1)
-%INIClass DEFAULT  ('INIClass')
-%RunTimeTranslatorType DEFAULT  ('TranslatorClass')
-%ExtractionFilename DEFAULT  ('')
-%TranslationGroups MULTI LONG  ()
-%TranslationFile DEPEND %TranslationGroups DEFAULT TIMES 0
-
-%TranslationGroup DEPEND %TranslationGroups DEFAULT TIMES 0
-
-%FileManagerType DEFAULT  ('FileManager')
-%ViewManagerType DEFAULT  ('ViewManager')
-%RelationManagerType DEFAULT  ('RelationManager')
-%BrowserType DEFAULT  ('BrowseClass')
-%ActiveInvisible LONG  (0)
-%AllowUnfilled LONG  (0)
-%RetainRow LONG  (1)
-%BrowseEIPManagerType DEFAULT  ('BrowseEIPManager')
-%EditInPlaceType DEFAULT  ('EditEntryClass')
-%StepManagerType DEFAULT  ('StepClass')
-%StepManagerLongType DEFAULT  ('StepLongClass')
-%StepManagerRealType DEFAULT  ('StepRealClass')
-%StepManagerStringType DEFAULT  ('StepStringClass')
-%StepManagerCustomType DEFAULT  ('StepCustomClass')
-%StepLocatorType DEFAULT  ('StepLocatorClass')
-%EntryLocatorType DEFAULT  ('EntryLocatorClass')
-%IncrementalLocatorType DEFAULT  ('IncrementalLocatorClass')
-%FilteredLocatorType DEFAULT  ('FilterLocatorClass')
-%FileDropManagerType DEFAULT  ('FileDropClass')
-%FileDropComboManagerType DEFAULT  ('FileDropComboClass')
-%QBEFormType DEFAULT  ('QueryFormClass')
-%QBEFormVisualType DEFAULT  ('QueryFormVisual')
-%QBEListType DEFAULT  ('QueryListClass')
-%QBEListVisualType DEFAULT  ('QueryListVisual')
-%ProcessType DEFAULT  ('ProcessClass')
-%PrintPreviewType DEFAULT  ('PrintPreviewClass')
-%ReportManagerType DEFAULT  ('ReportManager')
-%AsciiViewerClass DEFAULT  ('AsciiViewerClass')
-%AsciiSearchClass DEFAULT  ('AsciiSearchClass')
-%AsciiPrintClass DEFAULT  ('AsciiPrintClass')
-%AsciiFileManagerType DEFAULT  ('AsciiFileClass')
-%ToolbarClass DEFAULT  ('ToolbarClass')
-%ToolbarListBoxType DEFAULT  ('ToolbarListboxClass')
-%ToolbarRelTreeType DEFAULT  ('ToolbarReltreeClass')
-%ToolbarUpdateClassType DEFAULT  ('ToolbarUpdateClass')
 %ClassItem UNIQUE DEFAULT  ('ErrorManager', 'ErrorStatusManager', 'FileManager:', |
   'FuzzyMatcher', 'INIManager', 'RelationManager:', 'Translator')
 %DefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 5
@@ -153,10 +24,170 @@ WHEN  ('Translator') ('')
 
 %ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 0
 
+%ProgramAuthor DEFAULT  ('Randy Rogers')
+%Repository DEFAULT  ('')
+%ProgramIcon DEFAULT  ('CoolDemo.ico')
+%MessageDescription LONG  (1)
+%GlobalExternal LONG  (0)
+%ExternalSource DEFAULT  ('Dynamic Link Library (DLL)')
+%GenerateEmbedComments LONG  (0)
+%INIType DEFAULT  ('NVD_INI')
+%INIFile DEFAULT  ('Program Name.INI')
+%ININame DEFAULT  ('')
+%INIProgramIniLocation DEFAULT  ('APPDIR')
+%INICSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
+%CSIDLCompanyDir DEFAULT  ('')
+%CSIDLProductDir DEFAULT  ('')
+%CSIDLCreate LONG  (0)
+%INIInAppDirectory LONG  (1)
+%REGRoot DEFAULT  ('REG_CLASSES_ROOT')
+%DisableINISaveWindow LONG  (0)
+%PreserveVars MULTI LONG  ()
+%PreserveVar DEPEND %PreserveVars DEFAULT TIMES 0
+
+%EnableRunTimeTranslator LONG  (0)
 %FuzzyMatchingEnabled LONG  (1)
 %IgnoreCase LONG  (1)
 %WordOnly LONG  (0)
-%WindowFrameDragging LONG  (1)
+%ButtonMarginsCompatibility LONG  (0)
+%UseDefaultXPManifest LONG  (0)
+%GenerateXPManifest LONG  (1)
+%LinkGenerateXPManifest LONG  (0)
+%AddVistaXPManifest LONG  (0)
+%VistaManifestExecutionLevel DEFAULT  ('asInvoker')
+%VistaManifestUIAccess LONG  (0)
+%NoThemedControlsDependency LONG  (1)
+%VistaManifestdpiAware LONG  (1)
+%VistaManifestDependentAssembly MULTI LONG  ()
+%VistaManifestDependentAssemblyName DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyVersion DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyType DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyPublicKeyToken DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyLanguage DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyProcessorArchitecture DEPEND %VistaManifestDependentAssembly LONG TIMES 0
+
+%W7ManifestVista LONG  (1)
+%W7ManifestW7 LONG  (1)
+%W7ManifestW8 LONG  (1)
+%W7ManifestW81 LONG  (1)
+%W7ManifestW10 LONG  (1)
+%ForceMakeTransparentXPManifest LONG  (0)
+%ForceMakeColorXPManifest LONG  (0)
+%ForceSHEETNoTheme LONG  (0)
+%ExtUIXPMenuEnableGlobal LONG  (0)
+%ExtUIXPMenuColorTypeGlobal DEFAULT  ('OFF')
+%ExtUIXPMenuDisableImageBar LONG  (1)
+%ExtUIXPMenuEnableRuntime LONG  (0)
+%ExtUIXPMenuRuntimeVar DEFAULT  ('sGlobalTip')
+%ExtUIXPMenuColorLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorRightGlobal LONG  (12560039)
+%ExtUIXPMenuColorSelectionBarLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectionBarRightGlobal LONG  (15920364)
+%ExtUIXPMenuSelVertical LONG  (1)
+%ExtUIXPMenuColorSelectionBorderGlobal LONG  (15920364)
+%ExtUIXPMenuColorHotLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorHotRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectedLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectedRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorNormalBarLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorNormalBarRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorItemBackgroundGlobal LONG  (-2147483644)
+%ExtUIXPMenuColorNormalText LONG  (0)
+%ExtUIXPMenuColorSelectedText LONG  (0)
+%ExtUIXPMenuColorHotText LONG  (0)
+%ExtUIXPMenuFlat LONG  (1)
+%ExtUIXPMenuShowImageBar LONG  (0)
+%ExtUIXPMenuSeparator3D LONG  (1)
+%ExtUIXPMenuSeparatorFull LONG  (0)
+%ExtUIXPMenuVerticalLine LONG  (1)
+%ExtUIMDITabGlobal DEFAULT  ('DISABLE')
+%ExtUIMDITabStyleGlobal DEFAULT  ('Default')
+%ExtUITabStyleGlobal DEFAULT  ('Default')
+%WindowEnableEnhanceFocus LONG  (0)
+%SelectedText LONG  (1)
+%SelectedRadio LONG  (1)
+%SelectedSpin LONG  (1)
+%SelectedCheck LONG  (1)
+%SelectedDropList LONG  (1)
+%SelectedList LONG  (1)
+%SelectedDisplayChangeColor LONG  (1)
+%SelectedColor LONG  (65535)
+%SelectedStyle LONG  (1)
+%SelectedRequired LONG  (0)
+%SelectedRequiredColor LONG  (65535)
+%SelectedDisplayBox LONG  (1)
+%SelectedDisplayBoxFillColor LONG  (65535)
+%SelectedDisplayBoxBorderColor LONG  (0)
+%SelectedDisplayBoxBorderSize DEFAULT  ('2')
+%SelectedRequiredBox LONG  (0)
+%SelectedRequiredDisplayBoxFillColor LONG  (255)
+%SelectedRequiredDisplayBoxBorderColor LONG  (0)
+%SelectedCaret LONG  (1)
+%SelectedCaretColor LONG  (8421504)
+%SelectedCaretCharacter DEFAULT  ('»')
+%SelectedCaretCharacterSeparation DEFAULT  ('8')
+%ExcludeSelectedDropList LONG  (1)
+%EnableOSK DEFAULT  ('OFF')
+%GlobalUseEnterInsteadTab LONG  (0)
+%GlobalUseEnterInsteadTabExclude MULTI DEFAULT  ()
+%GlobalUseEnterInsteadTabEnable DEFAULT  ('Enable')
+%GlobalUseEnterInsteadTabEnableValue DEFAULT  ('True')
+%GlobalInterLine DEFAULT  ('0')
+%GlobalEnableAutoSizeColumn LONG  (0)
+%GlobalEnableListFormatManager LONG  (0)
+%GlobalUserFieldListFormatManager DEFAULT  ('1')
+%TableOrigin DEFAULT  ('Application')
+%FileEquate DEFAULT  ('LFM_CFile')
+%ConfigFilePRE DEFAULT  ('CFG')
+%ConfigFileOEM LONG  (0)
+%ConfigFileTHREAD LONG  (1)
+%ConfigFileENCRYPT LONG  (0)
+%ConfigFilePASSWORD DEFAULT  ('')
+%FormatNameSize DEFAULT  ('30')
+%FormatBufferSize DEFAULT  ('5120')
+%VariableBufferSize DEFAULT  ('2048')
+%ConfigFilePath DEFAULT  ('')
+%UseConfigFileName DEFAULT  ('Default')
+%ConfigFileNAME DEFAULT  ('Formats.FDB')
+%ColonCounter DEFAULT  ('')
+%WrongSymbol DEFAULT  ('')
+%DictionaryTableOrigin FILE  ()
+%GlobalLFMSortOrderMenuText DEFAULT  ('SortOrder')
+%GlobalEnableRebase LONG  (0)
+%RBDMethod DEFAULT  ('Specify manually')
+%RBDImageBase DEFAULT  ('10000000')
+%DefaultGenerate LONG  (0)
+%DefaultRILogout LONG  (1)
+%LockRecoverTime DEFAULT  ('10')
+%DefaultThreaded DEFAULT  ('Use File Setting')
+%DefaultCreate DEFAULT  ('Use File Setting')
+%DefaultExternal DEFAULT  ('None External')
+%DefaultLocalExternal LONG  (0)
+%DefaultExternalSource DEFAULT  ('')
+%DefaultExternalAPP LONG  (0)
+%DefaultExport LONG  (0)
+%DefaultOpenMode DEFAULT  ('Share')
+%DefaultUserAccess DEFAULT  ('Read/Write')
+%DefaultOtherAccess DEFAULT  ('Deny None')
+%DefaultLazyOpen LONG  (1)
+%GeneratePropDataPath LONG  (0)
+%PropDataPathLocation DEFAULT  ('CSIDLLIKEINI')
+%DataPathCSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
+%DataPathCSIDLCompanyDir DEFAULT  ('')
+%DataPathCSIDLProductDir DEFAULT  ('')
+%DataPathCSIDLCreate LONG  (0)
+%DataPathOtherDirectory DEFAULT  ('')
+%DataPathOtherDirectoryCreate LONG  (0)
+%OverrideGenerate DEPEND %File LONG TIMES 0
+
+%OverrideRILogout DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
 %GlobalObject DEPEND %ClassItem DEFAULT TIMES 5
 WHEN  ('ErrorManager') ('YES')
 WHEN  ('ErrorStatusManager') ('YES')
@@ -259,8 +290,28 @@ WHEN  ('INIManager')TIMES 0
 
 %ClassDataDim4 DEPEND %ClassPropertyItems DEFAULT TIMES 0
 
+%OverrideThreaded DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideCreate DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideExternal DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideLocalExternal DEPEND %File LONG TIMES 0
+
+%OverrideExternalSource DEPEND %File DEFAULT TIMES 0
+
+%OverrideExternalAPP DEPEND %File LONG TIMES 0
+
+%OverrideExport DEPEND %File LONG TIMES 0
+
 %FileDeclarationMode DEPEND %File DEFAULT TIMES 1
 WHEN  ('') ('Use User Options')
+
+%FileDeclarationType DEPEND %File LONG TIMES 1
+WHEN  ('') (0)
 
 %FileDeclarationThread DEPEND %File LONG TIMES 1
 WHEN  ('') (0)
@@ -272,90 +323,76 @@ WHEN  ('') (1)
 
 %FileDeclarationOver DEPEND %File DEFAULT TIMES 0
 
-%FileDeclarationType DEPEND %File LONG TIMES 1
+%OverrideOpenMode DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideUserAccess DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideOtherAccess DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideLazyOpen DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideDoNotAssertOnCloseMisuse DEPEND %File LONG TIMES 1
 WHEN  ('') (0)
 
+%StandardExternalModule DEPEND %Module LONG TIMES 4
+WHEN  ('') (1)
+WHEN  ('CoolDemo.clw') (1)
+WHEN  ('CoolDemo001.clw') (1)
+WHEN  ('cooldemo.clw') (1)
+
 %NoGenerateGlobals LONG  (0)
+%WindowManagerType DEFAULT  ('WindowManager')
+%ResetOnGainFocus LONG  (0)
+%AutoToolbar LONG  (1)
+%AutoRefresh LONG  (1)
 %ImageClass DEFAULT  ('ImageManager')
+%ErrorStatusManagerType DEFAULT  ('ErrorStatusClass')
+%ErrorManagerType DEFAULT  ('ErrorClass')
 %DefaultErrorCategory DEFAULT  ('ABC')
+%AllowSelectCopy LONG  (0)
 %StoreErrorHistory LONG  (0)
 %LimitStoredHistory LONG  (0)
 %ErrorHistoryThreshold DEFAULT  ('300')
 %HistoryViewTrigger DEFAULT  ('Level:Fatal')
-%FuzzyMatcherClass DEFAULT  ('FuzzyClass')
-%GridClass DEFAULT  ('GridClass')
-%SidebarClass DEFAULT  ('SidebarClass')
-%OverrideAbcSettings LONG  (0)
-%AbcSourceLocation DEFAULT  ('LINK')
-%AbcLibraryName DEFAULT  ('')
-%INIType DEFAULT  ('NVD_INI')
-%REGRoot DEFAULT  ('REG_CLASSES_ROOT')
-%WindowEnableEnhanceFocus LONG  (0)
-%SelectedText LONG  (1)
-%SelectedRadio LONG  (1)
-%SelectedSpin LONG  (1)
-%SelectedCheck LONG  (1)
-%SelectedDropList LONG  (1)
-%SelectedDisplayChangeColor LONG  (1)
-%SelectedColor LONG  (65535)
-%SelectedStyle LONG  (1)
-%ExcludeSelectedDropList LONG  (1)
-%SelectedRequired LONG  (0)
-%SelectedRequiredColor LONG  (65535)
-%SelectedDisplayBox LONG  (1)
-%SelectedDisplayBoxFillColor LONG  (65535)
-%SelectedDisplayBoxBorderColor LONG  (0)
-%SelectedDisplayBoxBorderSize DEFAULT  ('2')
-%SelectedRequiredBox LONG  (0)
-%SelectedRequiredDisplayBoxFillColor LONG  (255)
-%SelectedRequiredDisplayBoxBorderColor LONG  (0)
-%SelectedCaret LONG  (1)
-%SelectedCaretColor LONG  (8421504)
-%SelectedCaretCharacter DEFAULT  ('»')
-%SelectedCaretCharacterSeparation DEFAULT  ('8')
-%GlobalUseEnterInsteadTab LONG  (0)
-%GlobalUseEnterInsteadTabExclude MULTI DEFAULT  ()
-%GlobalEnableAutoSizeColumn LONG  (0)
-%GlobalEnableListFormatManager LONG  (0)
-%GlobalUserFieldListFormatManager DEFAULT  ('1')
-%TableOrigin DEFAULT  ('Application')
-%FileEquate DEFAULT  ('LFM_CFile')
-%ConfigFilePRE DEFAULT  ('CFG')
-%ConfigFileOEM LONG  (0)
-%ConfigFileTHREAD LONG  (1)
-%ConfigFileENCRYPT LONG  (0)
-%ConfigFilePASSWORD DEFAULT  ('')
-%FormatNameSize DEFAULT  ('30')
-%FormatBufferSize DEFAULT  ('5120')
-%VariableBufferSize DEFAULT  ('2048')
-%ConfigFilePath DEFAULT  ('')
-%UseConfigFileName DEFAULT  ('Default')
-%ConfigFileNAME DEFAULT  ('Formats.FDB')
-%ColonCounter DEFAULT  ('')
-%WrongSymbol DEFAULT  ('')
-%DictionaryTableOrigin FILE  ()
+%PopupClass DEFAULT  ('PopupClass')
+%SelectFileClass DEFAULT  ('SelectFileClass')
+%ResizerType DEFAULT  ('WindowResizeClass')
+%ResizerDeFaultFindParents LONG  (1)
+%ResizerDefaultOptimizeMoves LONG  (1)
+%ResizerDefaultOptimizeRedraws LONG  (1)
+%INIClass DEFAULT  ('INIClass')
+%RunTimeTranslatorType DEFAULT  ('TranslatorClass')
+%ExtractionFilename DEFAULT  ('')
+%TranslationGroups MULTI LONG  ()
+%TranslationFile DEPEND %TranslationGroups DEFAULT TIMES 0
+
+%TranslationGroup DEPEND %TranslationGroups DEFAULT TIMES 0
+
 %CalendarManagerType DEFAULT  ('CalendarClass')
-%GlobalUseABCClasess LONG  (1)
-%AppTemplateFamily DEFAULT  ('ABC')
-%CWTemplateVersion DEFAULT  ('v10.0')
-%ABCVersion DEFAULT  ('10000')
-%ProgramIcon DEFAULT  ('CoolDemo.ico')
-%INIInAppDirectory LONG  (1)
-%DisableINISaveWindow LONG  (0)
-%UseDefaultXPManifest LONG  (0)
-%GlobalUseEnterInsteadTabEnable DEFAULT  ('Enable')
-%GlobalUseEnterInsteadTabEnableValue DEFAULT  ('True')
-%GlobalEnableRebase LONG  (0)
-%RBDMethod DEFAULT  ('Specify manually')
-%RBDImageBase DEFAULT  ('10000000')
 %GlobalChangeColor LONG  (0)
 %GlobalColorSunday LONG  (255)
 %GlobalColorSaturday LONG  (255)
 %GlobalColorHoliday LONG  (32768)
 %GlobalColorOther LONG  (0)
 %GlobalSelectOnClose DEFAULT  ('Select')
+%GlobalUseABCClasess LONG  (1)
+%FileManagerType DEFAULT  ('FileManager')
+%ViewManagerType DEFAULT  ('ViewManager')
+%RelationManagerType DEFAULT  ('RelationManager')
+%BrowserType DEFAULT  ('BrowseClass')
+%ActiveInvisible LONG  (0)
+%AllowUnfilled LONG  (0)
+%RetainRow LONG  (1)
+%FileDropManagerType DEFAULT  ('FileDropClass')
+%FileDropComboManagerType DEFAULT  ('FileDropComboClass')
 %FormVCRManagerType DEFAULT  ('FormVCRClass')
+%BrowseEIPManagerType DEFAULT  ('BrowseEIPManager')
 %EditInPlaceInterface DEFAULT  ('Original')
+%EditInPlaceType DEFAULT  ('EditEntryClass')
 %EditInPlaceEntryType DEFAULT  ('EditEntryClass')
 %EditInPlaceTextType DEFAULT  ('EditTextClass')
 %EditInPlaceCheckType DEFAULT  ('EditCheckClass')
@@ -369,94 +406,57 @@ WHEN  ('') (0)
 %EditInPlaceCalendarType DEFAULT  ('EditCalendarClass')
 %EditInPlaceLookupType DEFAULT  ('EditLookupClass')
 %EditInPlaceOtherType DEFAULT  ('EditEntryClass')
+%QBEFormType DEFAULT  ('QueryFormClass')
+%QBEFormVisualType DEFAULT  ('QueryFormVisual')
+%QBEListType DEFAULT  ('QueryListClass')
+%QBEListVisualType DEFAULT  ('QueryListVisual')
+%StepManagerType DEFAULT  ('StepClass')
+%StepManagerLongType DEFAULT  ('StepLongClass')
+%StepManagerRealType DEFAULT  ('StepRealClass')
+%StepManagerStringType DEFAULT  ('StepStringClass')
+%StepManagerCustomType DEFAULT  ('StepCustomClass')
+%StepLocatorType DEFAULT  ('StepLocatorClass')
+%EntryLocatorType DEFAULT  ('EntryLocatorClass')
+%IncrementalLocatorType DEFAULT  ('IncrementalLocatorClass')
+%FilteredLocatorType DEFAULT  ('FilterLocatorClass')
+%FuzzyMatcherClass DEFAULT  ('FuzzyClass')
+%GridClass DEFAULT  ('GridClass')
+%SidebarClass DEFAULT  ('SidebarClass')
+%ProcessType DEFAULT  ('ProcessClass')
+%PrintPreviewType DEFAULT  ('PrintPreviewClass')
+%ReportManagerType DEFAULT  ('ReportManager')
 %ReportTargetSelectorManagerType DEFAULT  ('ReportTargetSelectorClass')
 %BreakManagerType DEFAULT  ('BreakManagerClass')
+%AsciiViewerClass DEFAULT  ('AsciiViewerClass')
+%AsciiSearchClass DEFAULT  ('AsciiSearchClass')
+%AsciiPrintClass DEFAULT  ('AsciiPrintClass')
+%AsciiFileManagerType DEFAULT  ('AsciiFileClass')
+%ToolbarClass DEFAULT  ('ToolbarClass')
+%ToolbarListBoxType DEFAULT  ('ToolbarListboxClass')
+%ToolbarRelTreeType DEFAULT  ('ToolbarReltreeClass')
+%ToolbarUpdateClassType DEFAULT  ('ToolbarUpdateClass')
 %ToolbarFormVCRType DEFAULT  ('ToolbarFormVCRClass')
-%GlobalLFMSortOrderMenuText DEFAULT  ('SortOrder')
-%DefaultLocalExternal LONG  (0)
-%OverrideLocalExternal DEPEND %File LONG TIMES 0
+%OverrideAbcSettings LONG  (0)
+%AbcSourceLocation DEFAULT  ('LINK')
+%AbcLibraryName DEFAULT  ('')
+%AppTemplateFamily DEFAULT  ('ABC')
+%CWTemplateVersion DEFAULT  ('v10.0')
+%ABCVersion DEFAULT  ('10000')
+%INIActive LONG  (0)
+%GlobalUseDefaultFileManager LONG  (1)
+%GlobalFileManagerClass DEFAULT  ('')
+%GlobalUseDefaultRelationManager LONG  (1)
+%GlobalRelationManagerClass DEFAULT  ('')
+%OverrideUseDefaultFileManager DEPEND %File LONG TIMES 0
 
-%ErrorStatusManagerType DEFAULT  ('ErrorStatusClass')
-%SelectedList LONG  (1)
-%AllowSelectCopy LONG  (0)
-%INIProgramIniLocation DEFAULT  ('APPDIR')
-%INICSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
-%CSIDLCompanyDir DEFAULT  ('')
-%CSIDLProductDir DEFAULT  ('')
-%CSIDLCreate LONG  (0)
+%OverrideFileManagerClass DEPEND %File DEFAULT TIMES 0
+
+%OverrideUseDefaultRelationManager DEPEND %File LONG TIMES 0
+
+%OverrideRelationManagerClass DEPEND %File DEFAULT TIMES 0
+
+%WindowFrameDragging LONG  (1)
 %EnableExceptionMessage LONG  (0)
-%GenerateXPManifest LONG  (1)
-%LinkGenerateXPManifest LONG  (0)
-%AddVistaXPManifest LONG  (0)
-%VistaManifestExecutionLevel DEFAULT  ('asInvoker')
-%VistaManifestUIAccess LONG  (0)
-%W7ManifestVista LONG  (1)
-%W7ManifestW7 LONG  (1)
-%ForceMakeTransparentXPManifest LONG  (0)
-%ExtUIXPMenuEnableGlobal LONG  (0)
-%ExtUIXPMenuColorTypeGlobal DEFAULT  ('OFF')
-%ExtUIXPMenuDisableImageBar LONG  (1)
-%ExtUIXPMenuEnableRuntime LONG  (0)
-%ExtUIXPMenuRuntimeVar DEFAULT  ('sGlobalTip')
-%ExtUIXPMenuColorLeftGlobal LONG  (15920364)
-%ExtUIXPMenuColorRightGlobal LONG  (12560039)
-%ExtUIXPMenuColorSelectionBarLeftGlobal LONG  (15920364)
-%ExtUIXPMenuColorSelectionBarRightGlobal LONG  (15920364)
-%ExtUIXPMenuSelVertical LONG  (1)
-%ExtUIXPMenuColorSelectionBorderGlobal LONG  (15920364)
-%ExtUIXPMenuColorHotLeftGlobal LONG  (15920364)
-%ExtUIXPMenuColorHotRightGlobal LONG  (15920364)
-%ExtUIXPMenuColorSelectedLeftGlobal LONG  (15920364)
-%ExtUIXPMenuColorSelectedRightGlobal LONG  (15920364)
-%ExtUIXPMenuColorNormalBarLeftGlobal LONG  (15920364)
-%ExtUIXPMenuColorNormalBarRightGlobal LONG  (15920364)
-%ExtUIXPMenuColorItemBackgroundGlobal LONG  (-2147483644)
-%ExtUIXPMenuColorNormalText LONG  (0)
-%ExtUIXPMenuColorSelectedText LONG  (0)
-%ExtUIXPMenuColorHotText LONG  (0)
-%ExtUIXPMenuFlat LONG  (1)
-%ExtUIXPMenuShowImageBar LONG  (0)
-%ExtUIXPMenuSeparator3D LONG  (1)
-%ExtUIXPMenuSeparatorFull LONG  (0)
-%ExtUIXPMenuVerticalLine LONG  (1)
-%ExtUIMDITabGlobal DEFAULT  ('DISABLE')
-%ExtUIMDITabStyleGlobal DEFAULT  ('Default')
-%ExtUITabStyleGlobal DEFAULT  ('Default')
-%GlobalInterLine DEFAULT  ('0')
-%GeneratePropDataPath LONG  (0)
-%PropDataPathLocation DEFAULT  ('CSIDLLIKEINI')
-%DataPathCSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
-%DataPathCSIDLCompanyDir DEFAULT  ('')
-%DataPathCSIDLProductDir DEFAULT  ('')
-%DataPathCSIDLCreate LONG  (0)
-%DataPathOtherDirectory DEFAULT  ('')
-%DataPathOtherDirectoryCreate LONG  (0)
-%ButtonMarginsCompatibility LONG  (0)
-%NoThemedControlsDependency LONG  (1)
-%W7ManifestW8 LONG  (1)
-%ForceMakeColorXPManifest LONG  (0)
-%ForceSHEETNoTheme LONG  (0)
-%VistaManifestDependentAssembly MULTI LONG  ()
-%VistaManifestDependentAssemblyName DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
-
-%VistaManifestDependentAssemblyVersion DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
-
-%VistaManifestDependentAssemblyType DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
-
-%VistaManifestDependentAssemblyPublicKeyToken DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
-
-%VistaManifestDependentAssemblyLanguage DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
-
-%VistaManifestDependentAssemblyProcessorArchitecture DEPEND %VistaManifestDependentAssembly LONG TIMES 0
-
-%W7ManifestW81 LONG  (1)
-%EnableOSK DEFAULT  ('OFF')
-%VistaManifestdpiAware LONG  (1)
-%W7ManifestW10 LONG  (1)
-%OverrideDoNotAssertOnCloseMisuse DEPEND %File LONG TIMES 1
-WHEN  ('') (0)
-
-%Repository DEFAULT  ('')
 [PERSIST]
 %SaveCreateLocalMap DEFAULT  ('1')
 %GenerationCompleted DEPEND %Module DEFAULT TIMES 2
@@ -468,12 +468,9 @@ WHEN  ('CoolDemo001.clw') ('1')
 %LastApplicationDebug DEFAULT  ('')
 %LastApplicationLocalLibrary DEFAULT  ('1')
 [PROJECT]
-#noedit
--- NAMESPACE ClarionDefaultNamespace
 #system win32 exe
 #model clarion lib
 #set RELEASE = on
-#pragma debug(vid=>off)
 #pragma define(_ABCDllMode_=>0) -- GENERATED
 #pragma define(_ABCLinkMode_=>1) -- GENERATED
 #compile "CoolDemo.clw" -- GENERATED
@@ -481,7 +478,7 @@ WHEN  ('CoolDemo001.clw') ('1')
 #compile "TTUTILLIB.C" -- GENERATED
 #compile "CoolDemo_BC0.CLW" -- GENERATED
 #compile "COOLDEMO_BC.CLW" -- GENERATED
-#link "cooldemo.EXE"
+#link "CoolDemo.EXE"
 [PROGRAM]
 [COMMON]
 FROM ABC ABC
@@ -560,11 +557,6 @@ EMBED %AfterGlobalIncludes
 [DEFINITION]
 [SOURCE]
 PROPERTY:BEGIN
-PRIORITY 3240
-PROPERTY:END
-   INCLUDE('debuger.inc'),ONCE
-[SOURCE]
-PROPERTY:BEGIN
 PRIORITY 3600
 PROPERTY:END
    INCLUDE('COOLTIPS.INC'),ONCE
@@ -615,7 +607,7 @@ PROPERTY:END
 [MODULE]
 [COMMON]
 FROM ABC GENERATED
-MODIFIED '2017/06/25' '17:17:55'
+MODIFIED '2017/06/30' '12:33:40'
 [DATA]
 [SCREENCONTROLS]
 ! ENTRY(@n-14),USE(ToolTip::OrigWndProc)
@@ -638,11 +630,6 @@ Main::OrigClientWndProc  LONG,THREAD
 [EMBED]
 EMBED %ModuleDataSection
 [DEFINITION]
-[SOURCE]
-PROPERTY:BEGIN
-PRIORITY 3600
-PROPERTY:END
-dbx   debuger
 [SOURCE]
 PROPERTY:BEGIN
 PRIORITY 4000
@@ -686,7 +673,7 @@ PROPERTY:END
 NAME Main
 [COMMON]
 FROM ABC Window
-MODIFIED '2017/06/25' '18:07:33'
+MODIFIED '2017/06/30' '12:31:38'
 [DATA]
 [SCREENCONTROLS]
 ! PROMPT('Files Opened:'),USE(?FilesOpened:Prompt)
@@ -1384,13 +1371,6 @@ WHEN '(),BYTE'
 [DEFINITION]
 [SOURCE]
 PROPERTY:BEGIN
-PRIORITY 300
-PROPERTY:END
-COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-dbx.mg_init('demo')  
-!ENDCOMPILE
-[SOURCE]
-PROPERTY:BEGIN
 PRIORITY 8150
 PROPERTY:END
 List1::OrigWndProc = ?List1{Prop:WndProc}                 ! Save address of code that handles window messages
@@ -1480,13 +1460,6 @@ END
 IF Main::OrigClientWndProc
    Window{Prop:ClientWndProc} = Main::OrigClientWndProc   ! Restore the handler for this client window
 END
-[SOURCE]
-PROPERTY:BEGIN
-PRIORITY 9800
-PROPERTY:END
-COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-dbx.kill()
-!ENDCOMPILE
 [END]
 [END]
 [END]
@@ -1605,28 +1578,14 @@ ti              LIKE(tagTOOLINFO)
            memcpy(ADDRESS(_nmhdr),lParam,SIZE(_nmhdr))
            CASE _nmhdr.code
              OF TTN_POP
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.Debugout('Main::ClientWndProc TTN_POP ' & _nmhdr.idfrom)
-                !ENDCOMPILE
 
              OF TTN_SHOW
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.Debugout('Main::ClientWndProc TTN_SHOW ' & _nmhdr.idfrom)
-                !ENDCOMPILE
 
              OF TTN_GETDISPINFO
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.Debugout('Main::ClientWndProc TTN_GETDISPINFO ' & _nmhdr.idfrom)
-                !ENDCOMPILE
 
              OF TTN_GETDISPINFOW
                 !reference the NMTTDISPINFO structure
                 memcpy(ADDRESS(ttd),lParam,SIZE(ttd))
-
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.Debugout('Main::ClientWndProc TTN_GETDISPINFOW ' & ttd.hdr.idfrom)
-                !ENDCOMPILE
-
                 IF ttd.hdr.idFrom = 123
                    ttd.lpszText = ADDRESS(glo:wszListTipText)
                    memcpy(lParam,ADDRESS(ttd),SIZE(ttd))
@@ -1680,10 +1639,6 @@ tipPos          LONG
            memcpy(ADDRESS(_nmhdr),lParam,SIZE(_nmhdr))
            CASE _nmhdr.code
              OF TTN_POP
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.debugout('List1::WndProc TTN_POP ' & _nmhdr.hwndFrom)
-                !ENDCOMPILE
-
                 hwndTT = GetWindowLong(hWnd,GWL_USERDATA)
                 IF hWndTT
                    memset(ADDRESS(ti),00h,SIZE(ti))
@@ -1696,10 +1651,6 @@ tipPos          LONG
                 RETURN FALSE
 
              OF TTN_SHOW
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.debugout('List1::WndProc TTN_SHOW ' & _nmhdr.hwndFrom)
-                !ENDCOMPILE
-
                 hwndTT = GetWindowLong(hWnd,GWL_USERDATA)
                 IF hWndTT
                    memset(ADDRESS(ti),00h,SIZE(ti))
@@ -1714,10 +1665,6 @@ tipPos          LONG
                 RETURN FALSE
 
              OF TTN_GETDISPINFO
-                COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-                dbx.debugout('List1::WndProc TTN_GETDISPINFO ' & _nmhdr.hwndFrom)
-                !ENDCOMPILE
-                
                 !Hook the Clarion Tooltip Window WndProc
                 IF ToolTip::OrigWndProc = 0
                    ToolTip::OrigWndProc = GetWindowLong(_nmhdr.hwndFrom,GWL_WNDPROC)
@@ -1749,9 +1696,6 @@ PRIORITY 8500
 PROPERTY:END
 ToolTip::WndProc PROCEDURE(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
    CODE
-      COMPILE('ENDCOMPILE',_DebugerLinkMode_)
-      dbx.Debugout('ToolTip::WndProc ' & dbx.GetEventDescr_WM(wMsg) & ', ' & wParam & ',' & lParam)
-      !ENDCOMPILE
       CASE wMsg
         OF WM_SHOWWINDOW
            RETURN 1
