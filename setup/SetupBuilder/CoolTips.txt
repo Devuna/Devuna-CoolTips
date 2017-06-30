@@ -69,7 +69,7 @@ Set Variable %_SB_BACKUPDIR% to "%_SB_INSTALLDIR%\BACKUP"
 [ User Interface ]
 ! Wizard dialog definition(s)
 Define Wizard Dialog "#1" (Welcome)
-Define Wizard Dialog "CLARIONDETECTION" (<unknown dialog type>) (%_SB_INSTALLDIR%) [C100]
+Define Wizard Dialog "CLARIONDETECTION" (Clarion Environment Detection) (%_SB_INSTALLDIR%) [C100]
 Define Wizard Dialog "#3" (License Agreement)
 Define Wizard Dialog "#4" (Select Install Folder) (%_SB_INSTALLDIR%)
 Define Wizard Dialog "#5" (Ready to Install) ()
@@ -110,6 +110,7 @@ Create Installation App & Log ("[UNINSTALL_LOG]")
 ::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Examples\CoolTips" [Feature:Always Install]
 ::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents" [Feature:Always Install]
 ::Create Folder "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents\CoolTips" [Feature:Always Install]
+::Create Folder "%_SB_INSTALLDIR%\accessory\addins\Devuna\Resources" [Feature:Always Install]
   
 [ Install Files ]
   
@@ -127,12 +128,13 @@ Install File(s) "C:\GitHub\Devuna-CoolTips\examples\CoolDemo\up.ico" to "%_CSIDL
 Install File(s) "C:\GitHub\Devuna-CoolTips\LICENSE" to "%_CSIDL_COMMON_DOCUMENTS%\Softvelocity\Clarion10\Accessory\Devuna\Documents\CoolTips\LICENSE" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-CoolTips\vendor\Devuna Examples.lnk" to "%_SB_INSTALLDIR%\accessory\vendor\Devuna\Devuna Examples.lnk" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-CoolTips\template\win\CoolTips.ico" to "%_SB_INSTALLDIR%\accessory\template\win\CoolTips.ico" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-CoolTips\template\win\cooltips.tpl" to "%_SB_INSTALLDIR%\accessory\template\win\cooltips.tpl" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\template\win\cooltips.tpl" to "%_SB_INSTALLDIR%\accessory\template\win\cooltips.tpl" [Feature:Always Install] [ClarionTpl]
 Install File(s) "C:\GitHub\Devuna-CoolTips\images\CoolTips.ico" to "%_SB_INSTALLDIR%\accessory\images\CoolTips.ico" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-CoolTips\addins\CoolTips.addin" to "%_SB_INSTALLDIR%\accessory\addins\Devuna\CoolTips.addin" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-CoolTips\template\win\cwcooltips.tpl" to "%_SB_INSTALLDIR%\accessory\template\win\cwcooltips.tpl" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\template\win\cwcooltips.tpl" to "%_SB_INSTALLDIR%\accessory\template\win\cwcooltips.tpl" [Feature:Always Install] [ClarionTpl]
+Install File(s) "C:\GitHub\Devuna-CoolTips\addins\Resources\DevunaBitmapResources.resources" to "%_SB_INSTALLDIR%\accessory\addins\Devuna\Resources\DevunaBitmapResources.resources" [Feature:Always Install]
+Install File(s) "C:\GitHub\Devuna-CoolTips\LICENSE" to "%_SB_INSTALLDIR%\accessory\documents\Devuna\CoolTips\LICENSE" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-CoolTips\help\CoolTips.chm" to "%_SB_INSTALLDIR%\accessory\documents\Devuna\CoolTips\CoolTips.chm" [Feature:Always Install]
-Install File(s) "C:\GitHub\Devuna-CoolTips\help\CoolTips.chm" to "%_SB_INSTALLDIR%\accessory\documents\Devuna\Cool Tips\CoolTips.chm" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-CoolTips\libsrc\win\cooltips.clw" to "%_SB_INSTALLDIR%\accessory\libsrc\win\cooltips.clw" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-CoolTips\libsrc\win\cooltips.inc" to "%_SB_INSTALLDIR%\accessory\libsrc\win\cooltips.inc" [Feature:Always Install]
 Install File(s) "C:\GitHub\Devuna-CoolTips\libsrc\win\ttutillib.c" to "%_SB_INSTALLDIR%\accessory\libsrc\win\ttutillib.c" [Feature:Always Install]
