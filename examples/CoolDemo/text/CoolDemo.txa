@@ -1,3 +1,484 @@
+[APPLICATION]
+VERSION 34
+TODO ABC ToDo
+PROCEDURE Main
+[COMMON]
+FROM ABC
+MODIFIED '2014/04/02' '13:21:31'
+[PROMPTS]
+%ClassItem UNIQUE DEFAULT  ('ErrorManager', 'ErrorStatusManager', 'FileManager:', |
+  'FuzzyMatcher', 'INIManager', 'RelationManager:', 'Translator')
+%DefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('ErrorClass')
+WHEN  ('ErrorStatusManager') ('ErrorStatusClass')
+WHEN  ('FuzzyMatcher') ('FuzzyClass')
+WHEN  ('INIManager') ('INIClass')
+WHEN  ('Translator') ('TranslatorClass')
+
+%ActualDefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('')
+WHEN  ('ErrorStatusManager') ('')
+WHEN  ('FuzzyMatcher') ('')
+WHEN  ('INIManager') ('')
+WHEN  ('Translator') ('')
+
+%ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 0
+
+%ProgramAuthor DEFAULT  ('Randy Rogers')
+%Repository DEFAULT  ('')
+%ProgramIcon DEFAULT  ('CoolDemo.ico')
+%MessageDescription LONG  (1)
+%GlobalExternal LONG  (0)
+%ExternalSource DEFAULT  ('Dynamic Link Library (DLL)')
+%GenerateEmbedComments LONG  (0)
+%INIType DEFAULT  ('NVD_INI')
+%INIFile DEFAULT  ('Program Name.INI')
+%ININame DEFAULT  ('')
+%INIProgramIniLocation DEFAULT  ('APPDIR')
+%INICSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
+%CSIDLCompanyDir DEFAULT  ('')
+%CSIDLProductDir DEFAULT  ('')
+%CSIDLCreate LONG  (0)
+%INIInAppDirectory LONG  (1)
+%REGRoot DEFAULT  ('REG_CLASSES_ROOT')
+%DisableINISaveWindow LONG  (0)
+%PreserveVars MULTI LONG  ()
+%PreserveVar DEPEND %PreserveVars DEFAULT TIMES 0
+
+%EnableRunTimeTranslator LONG  (0)
+%FuzzyMatchingEnabled LONG  (1)
+%IgnoreCase LONG  (1)
+%WordOnly LONG  (0)
+%ButtonMarginsCompatibility LONG  (0)
+%UseDefaultXPManifest LONG  (0)
+%GenerateXPManifest LONG  (1)
+%LinkGenerateXPManifest LONG  (0)
+%AddVistaXPManifest LONG  (0)
+%VistaManifestExecutionLevel DEFAULT  ('asInvoker')
+%VistaManifestUIAccess LONG  (0)
+%NoThemedControlsDependency LONG  (1)
+%VistaManifestdpiAware LONG  (1)
+%VistaManifestDependentAssembly MULTI LONG  ()
+%VistaManifestDependentAssemblyName DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyVersion DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyType DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyPublicKeyToken DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyLanguage DEPEND %VistaManifestDependentAssembly DEFAULT TIMES 0
+
+%VistaManifestDependentAssemblyProcessorArchitecture DEPEND %VistaManifestDependentAssembly LONG TIMES 0
+
+%W7ManifestVista LONG  (1)
+%W7ManifestW7 LONG  (1)
+%W7ManifestW8 LONG  (1)
+%W7ManifestW81 LONG  (1)
+%W7ManifestW10 LONG  (1)
+%ForceMakeTransparentXPManifest LONG  (0)
+%ForceMakeColorXPManifest LONG  (0)
+%ForceSHEETNoTheme LONG  (0)
+%ExtUIXPMenuEnableGlobal LONG  (0)
+%ExtUIXPMenuColorTypeGlobal DEFAULT  ('OFF')
+%ExtUIXPMenuDisableImageBar LONG  (1)
+%ExtUIXPMenuEnableRuntime LONG  (0)
+%ExtUIXPMenuRuntimeVar DEFAULT  ('sGlobalTip')
+%ExtUIXPMenuColorLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorRightGlobal LONG  (12560039)
+%ExtUIXPMenuColorSelectionBarLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectionBarRightGlobal LONG  (15920364)
+%ExtUIXPMenuSelVertical LONG  (1)
+%ExtUIXPMenuColorSelectionBorderGlobal LONG  (15920364)
+%ExtUIXPMenuColorHotLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorHotRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectedLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorSelectedRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorNormalBarLeftGlobal LONG  (15920364)
+%ExtUIXPMenuColorNormalBarRightGlobal LONG  (15920364)
+%ExtUIXPMenuColorItemBackgroundGlobal LONG  (-2147483644)
+%ExtUIXPMenuColorNormalText LONG  (0)
+%ExtUIXPMenuColorSelectedText LONG  (0)
+%ExtUIXPMenuColorHotText LONG  (0)
+%ExtUIXPMenuFlat LONG  (1)
+%ExtUIXPMenuShowImageBar LONG  (0)
+%ExtUIXPMenuSeparator3D LONG  (1)
+%ExtUIXPMenuSeparatorFull LONG  (0)
+%ExtUIXPMenuVerticalLine LONG  (1)
+%ExtUIMDITabGlobal DEFAULT  ('DISABLE')
+%ExtUIMDITabStyleGlobal DEFAULT  ('Default')
+%ExtUITabStyleGlobal DEFAULT  ('Default')
+%WindowEnableEnhanceFocus LONG  (0)
+%SelectedText LONG  (1)
+%SelectedRadio LONG  (1)
+%SelectedSpin LONG  (1)
+%SelectedCheck LONG  (1)
+%SelectedDropList LONG  (1)
+%SelectedList LONG  (1)
+%SelectedDisplayChangeColor LONG  (1)
+%SelectedColor LONG  (65535)
+%SelectedStyle LONG  (1)
+%SelectedRequired LONG  (0)
+%SelectedRequiredColor LONG  (65535)
+%SelectedDisplayBox LONG  (1)
+%SelectedDisplayBoxFillColor LONG  (65535)
+%SelectedDisplayBoxBorderColor LONG  (0)
+%SelectedDisplayBoxBorderSize DEFAULT  ('2')
+%SelectedRequiredBox LONG  (0)
+%SelectedRequiredDisplayBoxFillColor LONG  (255)
+%SelectedRequiredDisplayBoxBorderColor LONG  (0)
+%SelectedCaret LONG  (1)
+%SelectedCaretColor LONG  (8421504)
+%SelectedCaretCharacter DEFAULT  ('»')
+%SelectedCaretCharacterSeparation DEFAULT  ('8')
+%ExcludeSelectedDropList LONG  (1)
+%EnableOSK DEFAULT  ('OFF')
+%GlobalUseEnterInsteadTab LONG  (0)
+%GlobalUseEnterInsteadTabExclude MULTI DEFAULT  ()
+%GlobalUseEnterInsteadTabEnable DEFAULT  ('Enable')
+%GlobalUseEnterInsteadTabEnableValue DEFAULT  ('True')
+%GlobalInterLine DEFAULT  ('0')
+%GlobalEnableAutoSizeColumn LONG  (0)
+%GlobalEnableListFormatManager LONG  (0)
+%GlobalUserFieldListFormatManager DEFAULT  ('1')
+%TableOrigin DEFAULT  ('Application')
+%FileEquate DEFAULT  ('LFM_CFile')
+%ConfigFilePRE DEFAULT  ('CFG')
+%ConfigFileOEM LONG  (0)
+%ConfigFileTHREAD LONG  (1)
+%ConfigFileENCRYPT LONG  (0)
+%ConfigFilePASSWORD DEFAULT  ('')
+%FormatNameSize DEFAULT  ('30')
+%FormatBufferSize DEFAULT  ('5120')
+%VariableBufferSize DEFAULT  ('2048')
+%ConfigFilePath DEFAULT  ('')
+%UseConfigFileName DEFAULT  ('Default')
+%ConfigFileNAME DEFAULT  ('Formats.FDB')
+%ColonCounter DEFAULT  ('')
+%WrongSymbol DEFAULT  ('')
+%DictionaryTableOrigin FILE  ()
+%GlobalLFMSortOrderMenuText DEFAULT  ('SortOrder')
+%GlobalEnableRebase LONG  (0)
+%RBDMethod DEFAULT  ('Specify manually')
+%RBDImageBase DEFAULT  ('10000000')
+%DefaultGenerate LONG  (0)
+%DefaultRILogout LONG  (1)
+%LockRecoverTime DEFAULT  ('10')
+%DefaultThreaded DEFAULT  ('Use File Setting')
+%DefaultCreate DEFAULT  ('Use File Setting')
+%DefaultExternal DEFAULT  ('None External')
+%DefaultLocalExternal LONG  (0)
+%DefaultExternalSource DEFAULT  ('')
+%DefaultExternalAPP LONG  (0)
+%DefaultExport LONG  (0)
+%DefaultOpenMode DEFAULT  ('Share')
+%DefaultUserAccess DEFAULT  ('Read/Write')
+%DefaultOtherAccess DEFAULT  ('Deny None')
+%DefaultLazyOpen LONG  (1)
+%GeneratePropDataPath LONG  (0)
+%PropDataPathLocation DEFAULT  ('CSIDLLIKEINI')
+%DataPathCSIDLDirectory DEFAULT  ('SV:CSIDL_PERSONAL')
+%DataPathCSIDLCompanyDir DEFAULT  ('')
+%DataPathCSIDLProductDir DEFAULT  ('')
+%DataPathCSIDLCreate LONG  (0)
+%DataPathOtherDirectory DEFAULT  ('')
+%DataPathOtherDirectoryCreate LONG  (0)
+%OverrideGenerate DEPEND %File LONG TIMES 0
+
+%OverrideRILogout DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%GlobalObject DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('YES')
+WHEN  ('ErrorStatusManager') ('YES')
+WHEN  ('FuzzyMatcher') ('YES')
+WHEN  ('INIManager') ('YES')
+WHEN  ('Translator') ('YES')
+
+%ThisObjectName DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('GlobalErrors')
+WHEN  ('ErrorStatusManager') ('GlobalErrorsStatus')
+WHEN  ('FuzzyMatcher') ('FuzzyMatcher')
+WHEN  ('INIManager') ('INIMgr')
+WHEN  ('Translator') ('Translator')
+
+%UseDefaultABCBaseClass DEPEND %ClassItem LONG TIMES 5
+WHEN  ('ErrorManager') (1)
+WHEN  ('ErrorStatusManager') (1)
+WHEN  ('FuzzyMatcher') (1)
+WHEN  ('INIManager') (1)
+WHEN  ('Translator') (1)
+
+%UseABCBaseClass DEPEND %ClassItem LONG TIMES 5
+WHEN  ('ErrorManager') (1)
+WHEN  ('ErrorStatusManager') (1)
+WHEN  ('FuzzyMatcher') (1)
+WHEN  ('INIManager') (1)
+WHEN  ('Translator') (1)
+
+%ABCBaseClass DEPEND %ClassItem DEFAULT TIMES 5
+WHEN  ('ErrorManager') ('')
+WHEN  ('ErrorStatusManager') ('ADOBlob')
+WHEN  ('FuzzyMatcher') ('')
+WHEN  ('INIManager') ('')
+WHEN  ('Translator') ('')
+
+%ExtBaseClass DEPEND %ClassItem DEFAULT TIMES 0
+
+%BaseClassIncludeFile DEPEND %ClassItem DEFAULT TIMES 0
+
+%DeriveFromBaseClass DEPEND %ClassItem LONG TIMES 5
+WHEN  ('ErrorManager') (0)
+WHEN  ('ErrorStatusManager') (0)
+WHEN  ('FuzzyMatcher') (0)
+WHEN  ('INIManager') (0)
+WHEN  ('Translator') (0)
+
+%NewMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewMethodName DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewMethodPrototype DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewClassProperty DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataType DEPEND %NewClassPropertyItems DEFAULT TIMES 2
+WHEN  ('FuzzyMatcher')TIMES 0
+WHEN  ('INIManager')TIMES 0
+
+%NewClassOtherType DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataIsRef DEPEND %NewClassPropertyItems LONG TIMES 0
+
+%NewClassDataSize DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim1 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim2 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim3 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim4 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%ClassMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassMethodName DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassMethodPrototype DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassProperty DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataType DEPEND %ClassPropertyItems DEFAULT TIMES 2
+WHEN  ('FuzzyMatcher')TIMES 0
+WHEN  ('INIManager')TIMES 0
+
+%ClassOtherType DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataIsRef DEPEND %ClassPropertyItems LONG TIMES 0
+
+%ClassDataSize DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim1 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim2 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim3 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim4 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%OverrideThreaded DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideCreate DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideExternal DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideLocalExternal DEPEND %File LONG TIMES 0
+
+%OverrideExternalSource DEPEND %File DEFAULT TIMES 0
+
+%OverrideExternalAPP DEPEND %File LONG TIMES 0
+
+%OverrideExport DEPEND %File LONG TIMES 0
+
+%FileDeclarationMode DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use User Options')
+
+%FileDeclarationType DEPEND %File LONG TIMES 1
+WHEN  ('') (0)
+
+%FileDeclarationThread DEPEND %File LONG TIMES 1
+WHEN  ('') (0)
+
+%FileDeclarationBindable DEPEND %File LONG TIMES 1
+WHEN  ('') (1)
+
+%FileDeclarationName DEPEND %File DEFAULT TIMES 0
+
+%FileDeclarationOver DEPEND %File DEFAULT TIMES 0
+
+%OverrideOpenMode DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideUserAccess DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideOtherAccess DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideLazyOpen DEPEND %File DEFAULT TIMES 1
+WHEN  ('') ('Use Default')
+
+%OverrideDoNotAssertOnCloseMisuse DEPEND %File LONG TIMES 1
+WHEN  ('') (0)
+
+%StandardExternalModule DEPEND %Module LONG TIMES 4
+WHEN  ('') (1)
+WHEN  ('CoolDemo.clw') (1)
+WHEN  ('CoolDemo001.clw') (1)
+WHEN  ('cooldemo.clw') (1)
+
+%NoGenerateGlobals LONG  (0)
+%WindowManagerType DEFAULT  ('WindowManager')
+%ResetOnGainFocus LONG  (0)
+%AutoToolbar LONG  (1)
+%AutoRefresh LONG  (1)
+%ImageClass DEFAULT  ('ImageManager')
+%ErrorStatusManagerType DEFAULT  ('ErrorStatusClass')
+%ErrorManagerType DEFAULT  ('ErrorClass')
+%DefaultErrorCategory DEFAULT  ('ABC')
+%AllowSelectCopy LONG  (0)
+%StoreErrorHistory LONG  (0)
+%LimitStoredHistory LONG  (0)
+%ErrorHistoryThreshold DEFAULT  ('300')
+%HistoryViewTrigger DEFAULT  ('Level:Fatal')
+%PopupClass DEFAULT  ('PopupClass')
+%SelectFileClass DEFAULT  ('SelectFileClass')
+%ResizerType DEFAULT  ('WindowResizeClass')
+%ResizerDeFaultFindParents LONG  (1)
+%ResizerDefaultOptimizeMoves LONG  (1)
+%ResizerDefaultOptimizeRedraws LONG  (1)
+%INIClass DEFAULT  ('INIClass')
+%RunTimeTranslatorType DEFAULT  ('TranslatorClass')
+%ExtractionFilename DEFAULT  ('')
+%TranslationGroups MULTI LONG  ()
+%TranslationFile DEPEND %TranslationGroups DEFAULT TIMES 0
+
+%TranslationGroup DEPEND %TranslationGroups DEFAULT TIMES 0
+
+%CalendarManagerType DEFAULT  ('CalendarClass')
+%GlobalChangeColor LONG  (0)
+%GlobalColorSunday LONG  (255)
+%GlobalColorSaturday LONG  (255)
+%GlobalColorHoliday LONG  (32768)
+%GlobalColorOther LONG  (0)
+%GlobalSelectOnClose DEFAULT  ('Select')
+%GlobalUseABCClasess LONG  (1)
+%FileManagerType DEFAULT  ('FileManager')
+%ViewManagerType DEFAULT  ('ViewManager')
+%RelationManagerType DEFAULT  ('RelationManager')
+%BrowserType DEFAULT  ('BrowseClass')
+%ActiveInvisible LONG  (0)
+%AllowUnfilled LONG  (0)
+%RetainRow LONG  (1)
+%FileDropManagerType DEFAULT  ('FileDropClass')
+%FileDropComboManagerType DEFAULT  ('FileDropComboClass')
+%FormVCRManagerType DEFAULT  ('FormVCRClass')
+%BrowseEIPManagerType DEFAULT  ('BrowseEIPManager')
+%EditInPlaceInterface DEFAULT  ('Original')
+%EditInPlaceType DEFAULT  ('EditEntryClass')
+%EditInPlaceEntryType DEFAULT  ('EditEntryClass')
+%EditInPlaceTextType DEFAULT  ('EditTextClass')
+%EditInPlaceCheckType DEFAULT  ('EditCheckClass')
+%EditInPlaceSpinType DEFAULT  ('EditSpinClass')
+%EditInPlaceDropListType DEFAULT  ('EditDropListClass')
+%EditInPlaceDropComboType DEFAULT  ('EditDropComboClass')
+%EditInPlaceColorType DEFAULT  ('EditColorClass')
+%EditInPlaceFileType DEFAULT  ('EditFileClass')
+%EditInPlaceFontType DEFAULT  ('EditFontClass')
+%EditInPlaceMultiSelectType DEFAULT  ('EditMultiSelectClass')
+%EditInPlaceCalendarType DEFAULT  ('EditCalendarClass')
+%EditInPlaceLookupType DEFAULT  ('EditLookupClass')
+%EditInPlaceOtherType DEFAULT  ('EditEntryClass')
+%QBEFormType DEFAULT  ('QueryFormClass')
+%QBEFormVisualType DEFAULT  ('QueryFormVisual')
+%QBEListType DEFAULT  ('QueryListClass')
+%QBEListVisualType DEFAULT  ('QueryListVisual')
+%StepManagerType DEFAULT  ('StepClass')
+%StepManagerLongType DEFAULT  ('StepLongClass')
+%StepManagerRealType DEFAULT  ('StepRealClass')
+%StepManagerStringType DEFAULT  ('StepStringClass')
+%StepManagerCustomType DEFAULT  ('StepCustomClass')
+%StepLocatorType DEFAULT  ('StepLocatorClass')
+%EntryLocatorType DEFAULT  ('EntryLocatorClass')
+%IncrementalLocatorType DEFAULT  ('IncrementalLocatorClass')
+%FilteredLocatorType DEFAULT  ('FilterLocatorClass')
+%FuzzyMatcherClass DEFAULT  ('FuzzyClass')
+%GridClass DEFAULT  ('GridClass')
+%SidebarClass DEFAULT  ('SidebarClass')
+%ProcessType DEFAULT  ('ProcessClass')
+%PrintPreviewType DEFAULT  ('PrintPreviewClass')
+%ReportManagerType DEFAULT  ('ReportManager')
+%ReportTargetSelectorManagerType DEFAULT  ('ReportTargetSelectorClass')
+%BreakManagerType DEFAULT  ('BreakManagerClass')
+%AsciiViewerClass DEFAULT  ('AsciiViewerClass')
+%AsciiSearchClass DEFAULT  ('AsciiSearchClass')
+%AsciiPrintClass DEFAULT  ('AsciiPrintClass')
+%AsciiFileManagerType DEFAULT  ('AsciiFileClass')
+%ToolbarClass DEFAULT  ('ToolbarClass')
+%ToolbarListBoxType DEFAULT  ('ToolbarListboxClass')
+%ToolbarRelTreeType DEFAULT  ('ToolbarReltreeClass')
+%ToolbarUpdateClassType DEFAULT  ('ToolbarUpdateClass')
+%ToolbarFormVCRType DEFAULT  ('ToolbarFormVCRClass')
+%OverrideAbcSettings LONG  (0)
+%AbcSourceLocation DEFAULT  ('LINK')
+%AbcLibraryName DEFAULT  ('')
+%AppTemplateFamily DEFAULT  ('ABC')
+%CWTemplateVersion DEFAULT  ('v10.0')
+%ABCVersion DEFAULT  ('10000')
+%INIActive LONG  (0)
+%GlobalUseDefaultFileManager LONG  (1)
+%GlobalFileManagerClass DEFAULT  ('')
+%GlobalUseDefaultRelationManager LONG  (1)
+%GlobalRelationManagerClass DEFAULT  ('')
+%OverrideUseDefaultFileManager DEPEND %File LONG TIMES 0
+
+%OverrideFileManagerClass DEPEND %File DEFAULT TIMES 0
+
+%OverrideUseDefaultRelationManager DEPEND %File LONG TIMES 0
+
+%OverrideRelationManagerClass DEPEND %File DEFAULT TIMES 0
+
+%WindowFrameDragging LONG  (1)
+%EnableExceptionMessage LONG  (0)
+[PERSIST]
+%SaveCreateLocalMap DEFAULT  ('1')
+%GenerationCompleted DEPEND %Module DEFAULT TIMES 2
+WHEN  ('CoolDemo.clw') ('1')
+WHEN  ('CoolDemo001.clw') ('1')
+
+%LastTarget32 DEFAULT  ('1')
+%LastProgramExtension DEFAULT  ('EXE')
+%LastApplicationDebug DEFAULT  ('')
+%LastApplicationLocalLibrary DEFAULT  ('1')
+[PROJECT]
+#system win32 exe
+#model clarion lib
+#set RELEASE = on
+#pragma define(_ABCDllMode_=>0) -- GENERATED
+#pragma define(_ABCLinkMode_=>1) -- GENERATED
+#compile "CoolDemo.clw" -- GENERATED
+#compile "CoolDemo001.clw" -- GENERATED
+#compile "TTUTILLIB.C" -- GENERATED
+#compile "CoolDemo_BC0.CLW" -- GENERATED
+#compile "COOLDEMO_BC.CLW" -- GENERATED
+#link "CoolDemo.EXE"
 [PROGRAM]
 [COMMON]
 FROM ABC ABC
@@ -122,4 +603,1488 @@ PROPERTY:END
 !endregion Notices
 [END]
 [END]
+[END]
+[MODULE]
+[COMMON]
+FROM ABC GENERATED
+MODIFIED '2017/06/30' '12:33:40'
+[DATA]
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(ToolTip::OrigWndProc)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(ToolTip::OrigWndProc)
+ToolTip::OrigWndProc     LONG,THREAD
+!!> GUID('251d061b-302b-47e0-ae09-dd6477e473d0'),PROMPT('List 1 :: Orig Wnd Proc:'),HEADER('List 1 :: Orig Wnd Proc'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(List1::OrigWndProc)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(List1::OrigWndProc)
+List1::OrigWndProc       LONG,THREAD
+!!> GUID('bfa23076-bcbe-42e8-a004-6320e900e03c'),PICTURE(@n-14)
+[SCREENCONTROLS]
+! ENTRY(@n-14),USE(Main::OrigClientWndProc)
+[REPORTCONTROLS]
+! STRING(@n-14),USE(Main::OrigClientWndProc)
+Main::OrigClientWndProc  LONG,THREAD
+!!> GUID('2bee6319-2b4c-4646-bb14-b926d7b63c45'),PICTURE(@n-14)
+[EMBED]
+EMBED %ModuleDataSection
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 4000
+PROPERTY:END
+                     MAP
+                        ToolTip::WndProc(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam),LONG,PASCAL
+                        List1::WndProc(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam),LONG,PASCAL
+                        Main::ClientWndProc(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam),LONG,PASCAL
+                     END
+[END]
+EMBED %StartOfModule
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 4000
+PROPERTY:END
+!region Notices
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+!endregion Notices
+[END]
+[END]
+[PROCEDURE]
+NAME Main
+[COMMON]
+FROM ABC Window
+MODIFIED '2017/06/30' '12:31:38'
+[DATA]
+[SCREENCONTROLS]
+! PROMPT('Files Opened:'),USE(?FilesOpened:Prompt)
+! ENTRY(@n3),USE(FilesOpened)
+[REPORTCONTROLS]
+! STRING(@n3),USE(FilesOpened)
+FilesOpened              BYTE
+!!> GUID('f5431a7e-f2e6-44ff-bdea-ff783abc595c'),PROMPT('Files Opened:'),HEADER('Files Opened'),PICTURE(@n3)
+[SCREENCONTROLS]
+! PROMPT('s Local Tip:'),USE(?sLocalTip:Prompt)
+! ENTRY(@s20),USE(sLocalTip)
+[REPORTCONTROLS]
+! STRING(@s20),USE(sLocalTip)
+sLocalTip                STRING(20)
+!!> GUID('92d12173-6a1f-4fdf-8adc-4ccc713c18cd'),INITIAL('A Local Tip {9}'),PROMPT('s Local Tip:'),HEADER('s Local Tip'),PICTURE(@s20)
+[SCREENCONTROLS]
+! PROMPT('my Queue:'),USE(?myQueue:Prompt)
+! ENTRY(@s7),USE(myQueue)
+[REPORTCONTROLS]
+! STRING(@s7),USE(myQueue)
+myQueue                  QUEUE,PRE()
+!!> GUID('0df75f11-0fd7-4f9d-8b20-7ae4555f7f0d'),PROMPT('my Queue:'),HEADER('my Queue'),PICTURE(@s7)
+[SCREENCONTROLS]
+! PROMPT('sz RC 01:'),USE(?szRC01:Prompt)
+! ENTRY(@s6),USE(szRC01)
+[REPORTCONTROLS]
+! STRING(@s6),USE(szRC01)
+szRC01                     CSTRING(7)
+!!> GUID('a33f7a14-1970-473b-9913-af9e688d6776'),PROMPT('sz RC 01:'),HEADER('sz RC 01'),PICTURE(@s6)
+[SCREENCONTROLS]
+! ENTRY(@s15),USE(szTip01)
+[REPORTCONTROLS]
+! STRING(@s15),USE(szTip01)
+szTip01                    CSTRING(16)
+!!> GUID('fec9f477-18e8-4eab-a539-a6d990da521e'),PICTURE(@s15)
+[SCREENCONTROLS]
+! ENTRY(@s6),USE(szRC02)
+[REPORTCONTROLS]
+! STRING(@s6),USE(szRC02)
+szRC02                     CSTRING(7)
+!!> GUID('d4a5939e-a2e8-41d1-98ea-70dfec4211e2'),PICTURE(@s6)
+[SCREENCONTROLS]
+! ENTRY(@s15),USE(szTip02)
+[REPORTCONTROLS]
+! STRING(@s15),USE(szTip02)
+szTip02                    CSTRING(16)
+!!> GUID('72806b41-24e2-4e75-96c8-6d1aab462b09'),PICTURE(@s15)
+[SCREENCONTROLS]
+! ENTRY(@s6),USE(szRC03)
+[REPORTCONTROLS]
+! STRING(@s6),USE(szRC03)
+szRC03                     CSTRING(7)
+!!> GUID('a9f9c2f2-3360-4f71-86c4-160dfbe2ffb7'),PICTURE(@s6)
+[SCREENCONTROLS]
+! ENTRY(@s15),USE(szTip03)
+[REPORTCONTROLS]
+! STRING(@s15),USE(szTip03)
+szTip03                    CSTRING(16)
+!!> GUID('10ea7434-979d-40b8-9c44-0bdb537b7390'),PICTURE(@s15)
+                         END
+!!> GUID('5c16aa93-dee2-4e8d-b751-72b57540d40c')
+[PROMPTS]
+%ClassItem UNIQUE DEFAULT  ('Default', 'WindowToolbar')
+%DefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('WindowManager')
+WHEN  ('WindowToolbar') ('ToolbarClass')
+
+%ActualDefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('')
+WHEN  ('WindowToolbar') ('')
+
+%ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 1
+WHEN  ('Default') ('Init {19}PROCEDURE(),BYTE,PROC,DERIVED', 'Kill {19}PROCEDURE(),BYTE,PROC,DERIVED', |
+  'Open {19}PROCEDURE(),DERIVED', 'TakeAccepted {11}PROCEDURE(),BYTE,PROC,DERIVED', |
+  'TakeWindowEvent        PROCEDURE(),BYTE,PROC,DERIVED')
+
+%ReturnValue FIELD  ()
+%WindowOperationMode DEFAULT  ('Use WINDOW setting')
+%INISaveWindow LONG  (1)
+%ThisObjectName DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('ThisWindow')
+WHEN  ('WindowToolbar') ('Toolbar')
+
+%UseDefaultABCBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('Default') (1)
+WHEN  ('WindowToolbar') (1)
+
+%UseABCBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('Default') (1)
+WHEN  ('WindowToolbar') (1)
+
+%ABCBaseClass DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('AsciiFileClass')
+WHEN  ('WindowToolbar') ('AsciiFileClass')
+
+%ExtBaseClass DEPEND %ClassItem DEFAULT TIMES 0
+
+%BaseClassIncludeFile DEPEND %ClassItem DEFAULT TIMES 0
+
+%DeriveFromBaseClass DEPEND %ClassItem LONG TIMES 2
+WHEN  ('Default') (0)
+WHEN  ('WindowToolbar') (0)
+
+%NewMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewMethodName DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewMethodPrototype DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewClassProperty DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataType DEPEND %NewClassPropertyItems DEFAULT TIMES 1
+WHEN  ('WindowToolbar')TIMES 0
+
+%NewClassOtherType DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataIsRef DEPEND %NewClassPropertyItems LONG TIMES 0
+
+%NewClassDataSize DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim1 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim2 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim3 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim4 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%ClassMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassMethodName DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassMethodPrototype DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassProperty DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataType DEPEND %ClassPropertyItems DEFAULT TIMES 1
+WHEN  ('WindowToolbar')TIMES 0
+
+%ClassOtherType DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataIsRef DEPEND %ClassPropertyItems LONG TIMES 0
+
+%ClassDataSize DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim1 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim2 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim3 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim4 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ButtonAction DEPEND %Control DEFAULT TIMES 15
+WHEN  ('?Button2') ('No Special Action')
+WHEN  ('?Button3') ('No Special Action')
+WHEN  ('?Button4') ('No Special Action')
+WHEN  ('?CloseButton') ('No Special Action')
+WHEN  ('?DynamicRegionString') ('No Special Action')
+WHEN  ('?Image1') ('No Special Action')
+WHEN  ('?Image2') ('No Special Action')
+WHEN  ('?Image3') ('No Special Action')
+WHEN  ('?Image4') ('No Special Action')
+WHEN  ('?Image5') ('No Special Action')
+WHEN  ('?List1') ('No Special Action')
+WHEN  ('?Region1') ('No Special Action')
+WHEN  ('?Region2') ('No Special Action')
+WHEN  ('?Region3') ('No Special Action')
+WHEN  ('?String1') ('No Special Action')
+
+%ButtonRunName DEPEND %Control DEFAULT TIMES 2
+WHEN  ('?Button2') ('')
+WHEN  ('?CloseButton') ('')
+
+%ButtonRunParameters DEPEND %Control DEFAULT TIMES 2
+WHEN  ('?Button2') ('')
+WHEN  ('?CloseButton') ('')
+
+%ButtonProcedure DEPEND %Control PROCEDURE TIMES 2
+WHEN  ('?Button2') ()
+WHEN  ('?CloseButton') ()
+
+%ButtonThread DEPEND %Control LONG TIMES 2
+WHEN  ('?Button2') (0)
+WHEN  ('?CloseButton') (0)
+
+%ButtonThreadStack DEPEND %Control DEFAULT TIMES 15
+WHEN  ('?Button2') ('25000')
+WHEN  ('?Button3') ('25000')
+WHEN  ('?Button4') ('25000')
+WHEN  ('?CloseButton') ('25000')
+WHEN  ('?DynamicRegionString') ('25000')
+WHEN  ('?Image1') ('25000')
+WHEN  ('?Image2') ('25000')
+WHEN  ('?Image3') ('25000')
+WHEN  ('?Image4') ('25000')
+WHEN  ('?Image5') ('25000')
+WHEN  ('?List1') ('25000')
+WHEN  ('?Region1') ('25000')
+WHEN  ('?Region2') ('25000')
+WHEN  ('?Region3') ('25000')
+WHEN  ('?String1') ('25000')
+
+%ButtonParameters DEPEND %Control DEFAULT TIMES 2
+WHEN  ('?Button2') ('')
+WHEN  ('?CloseButton') ('')
+
+%ButtonReturnValueAssignment DEPEND %Control FIELD TIMES 2
+WHEN  ('?Button2') ()
+WHEN  ('?CloseButton') ()
+
+%ButtonReturnValueReferenceAssign DEPEND %Control LONG TIMES 2
+WHEN  ('?Button2') (0)
+WHEN  ('?CloseButton') (0)
+
+%ButtonRequest DEPEND %Control DEFAULT TIMES 15
+WHEN  ('?Button2') ('None')
+WHEN  ('?Button3') ('None')
+WHEN  ('?Button4') ('None')
+WHEN  ('?CloseButton') ('None')
+WHEN  ('?DynamicRegionString') ('None')
+WHEN  ('?Image1') ('None')
+WHEN  ('?Image2') ('None')
+WHEN  ('?Image3') ('None')
+WHEN  ('?Image4') ('None')
+WHEN  ('?Image5') ('None')
+WHEN  ('?List1') ('None')
+WHEN  ('?Region1') ('None')
+WHEN  ('?Region2') ('None')
+WHEN  ('?Region3') ('None')
+WHEN  ('?String1') ('None')
+
+%ButtonThreadParameters DEPEND %Control DEFAULT TIMES 2
+WHEN  ('?Button2') ('')
+WHEN  ('?CloseButton') ('')
+
+%ButtonThreadReturnValueAssignment DEPEND %Control FIELD TIMES 2
+WHEN  ('?Button2') ()
+WHEN  ('?CloseButton') ()
+
+%PreLookupKey DEPEND %Control KEY TIMES 0
+
+%PreLookupField DEPEND %Control COMPONENT TIMES 0
+
+%PreLookupProcedure DEPEND %Control PROCEDURE TIMES 0
+
+%PostLookupKey DEPEND %Control KEY TIMES 0
+
+%PostLookupField DEPEND %Control COMPONENT TIMES 0
+
+%PostLookupProcedure DEPEND %Control PROCEDURE TIMES 0
+
+%PostLookupDuringValidate DEPEND %Control LONG TIMES 14
+WHEN  ('?Button2') (1)
+WHEN  ('?Button4') (1)
+WHEN  ('?CloseButton') (1)
+WHEN  ('?DynamicRegionString') (1)
+WHEN  ('?Image1') (1)
+WHEN  ('?Image2') (1)
+WHEN  ('?Image3') (1)
+WHEN  ('?Image4') (1)
+WHEN  ('?Image5') (1)
+WHEN  ('?List1') (1)
+WHEN  ('?Region1') (1)
+WHEN  ('?Region2') (1)
+WHEN  ('?Region3') (1)
+WHEN  ('?String1') (1)
+
+%ForceWindowRefresh DEPEND %Control LONG TIMES 0
+
+%LookupAssign DEPEND %Control MULTI LONG TIMES 0
+
+%MoreField DEPEND %LookupAssign DEFAULT TIMES 0
+
+%MoreTarget DEPEND %LookupAssign FIELD TIMES 0
+
+%CheckedAssigns DEPEND %Control MULTI LONG TIMES 0
+
+%CheckedAssignVariable DEPEND %CheckedAssigns FIELD TIMES 0
+
+%CheckedAssignValue DEPEND %CheckedAssigns DEFAULT TIMES 0
+
+%CheckedHides DEPEND %Control MULTI LONG TIMES 0
+
+%CheckedControl DEPEND %CheckedHides DEFAULT TIMES 0
+
+%CheckedControlAction DEPEND %CheckedHides DEFAULT TIMES 14
+WHEN  ('?Button2')TIMES 0
+WHEN  ('?Button4')TIMES 0
+WHEN  ('?CloseButton')TIMES 0
+WHEN  ('?DynamicRegionString')TIMES 0
+WHEN  ('?Image1')TIMES 0
+WHEN  ('?Image2')TIMES 0
+WHEN  ('?Image3')TIMES 0
+WHEN  ('?Image4')TIMES 0
+WHEN  ('?Image5')TIMES 0
+WHEN  ('?List1')TIMES 0
+WHEN  ('?Region1')TIMES 0
+WHEN  ('?Region2')TIMES 0
+WHEN  ('?Region3')TIMES 0
+WHEN  ('?String1')TIMES 0
+
+%CheckedEnables DEPEND %Control MULTI LONG TIMES 0
+
+%CheckedControl1 DEPEND %CheckedEnables DEFAULT TIMES 0
+
+%CheckedControl1Action DEPEND %CheckedEnables DEFAULT TIMES 14
+WHEN  ('?Button2')TIMES 0
+WHEN  ('?Button4')TIMES 0
+WHEN  ('?CloseButton')TIMES 0
+WHEN  ('?DynamicRegionString')TIMES 0
+WHEN  ('?Image1')TIMES 0
+WHEN  ('?Image2')TIMES 0
+WHEN  ('?Image3')TIMES 0
+WHEN  ('?Image4')TIMES 0
+WHEN  ('?Image5')TIMES 0
+WHEN  ('?List1')TIMES 0
+WHEN  ('?Region1')TIMES 0
+WHEN  ('?Region2')TIMES 0
+WHEN  ('?Region3')TIMES 0
+WHEN  ('?String1')TIMES 0
+
+%UncheckedAssigns DEPEND %Control MULTI LONG TIMES 0
+
+%UncheckedAssignVariable DEPEND %UncheckedAssigns FIELD TIMES 0
+
+%UncheckedAssignValue DEPEND %UncheckedAssigns DEFAULT TIMES 0
+
+%UnCheckedHides DEPEND %Control MULTI LONG TIMES 0
+
+%UnCheckedControl DEPEND %UnCheckedHides DEFAULT TIMES 0
+
+%UnCheckedControlAction DEPEND %UnCheckedHides DEFAULT TIMES 14
+WHEN  ('?Button2')TIMES 0
+WHEN  ('?Button4')TIMES 0
+WHEN  ('?CloseButton')TIMES 0
+WHEN  ('?DynamicRegionString')TIMES 0
+WHEN  ('?Image1')TIMES 0
+WHEN  ('?Image2')TIMES 0
+WHEN  ('?Image3')TIMES 0
+WHEN  ('?Image4')TIMES 0
+WHEN  ('?Image5')TIMES 0
+WHEN  ('?List1')TIMES 0
+WHEN  ('?Region1')TIMES 0
+WHEN  ('?Region2')TIMES 0
+WHEN  ('?Region3')TIMES 0
+WHEN  ('?String1')TIMES 0
+
+%UnCheckedEnables DEPEND %Control MULTI LONG TIMES 0
+
+%UnCheckedControl1 DEPEND %UnCheckedEnables DEFAULT TIMES 0
+
+%UnCheckedControl1Action DEPEND %UnCheckedEnables DEFAULT TIMES 14
+WHEN  ('?Button2')TIMES 0
+WHEN  ('?Button4')TIMES 0
+WHEN  ('?CloseButton')TIMES 0
+WHEN  ('?DynamicRegionString')TIMES 0
+WHEN  ('?Image1')TIMES 0
+WHEN  ('?Image2')TIMES 0
+WHEN  ('?Image3')TIMES 0
+WHEN  ('?Image4')TIMES 0
+WHEN  ('?Image5')TIMES 0
+WHEN  ('?List1')TIMES 0
+WHEN  ('?Region1')TIMES 0
+WHEN  ('?Region2')TIMES 0
+WHEN  ('?Region3')TIMES 0
+WHEN  ('?String1')TIMES 0
+
+%GlobalObject DEPEND %ClassItem DEFAULT TIMES 2
+WHEN  ('Default') ('NO')
+WHEN  ('WindowToolbar') ('NO')
+
+%ProcedureDisableEnhanceFocus LONG  (0)
+%ProcedureUseEnterInsteadTabOverride LONG  (0)
+%WindowUseEnterInsteadTab LONG  (1)
+%ProcedureUseEnterInsteadTabExcludeG LONG  (1)
+%WindowUseEnterInsteadTabExclude MULTI DEFAULT  ()
+%WindowStyles MULTI LONG  ()
+%WindowStyleFontName DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontSize DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontStyle DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontColor DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontCharSet DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleForegroundNormal DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleBackgroundNormal DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleForegroundSelected DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleBackgroundSelected DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStylePicture DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleOtherListboxes MULTI DEFAULT  ()
+%ProcedureAutoBindFields MULTI LONG  ()
+%ProcedureAutoBindField DEPEND %ProcedureAutoBindFields DEFAULT TIMES 0
+
+%ProcedureAutoBindFieldTPL DEPEND %ProcedureAutoBindFields DEFAULT TIMES 0
+
+%ProcedureAutoBindProcedures MULTI LONG  ()
+%ProcedureAutoBindProcedure DEPEND %ProcedureAutoBindProcedures DEFAULT TIMES 0
+
+%ProcedureAutoBindProcedureTPL DEPEND %ProcedureAutoBindProcedures DEFAULT TIMES 0
+
+%ProcedureUserBindFields MULTI LONG  ()
+%ProcedureUserBindField DEPEND %ProcedureUserBindFields FIELD TIMES 0
+
+%ProcedureAutoBindFieldIgnore DEPEND %ProcedureAutoBindFields LONG TIMES 0
+
+%ProcedureUserBindProcedures MULTI LONG  ()
+%ProcedureUserBindProcedure DEPEND %ProcedureUserBindProcedures PROCEDURE TIMES 0
+
+%ProcedureAutoBindProcedureIgnore DEPEND %ProcedureAutoBindProcedures LONG TIMES 0
+
+%ProcedureUserBindExpressions MULTI LONG  ()
+%ProcedureUserBindExpressionName DEPEND %ProcedureUserBindExpressions DEFAULT TIMES 0
+
+%ProcedureUserBindExpression DEPEND %ProcedureUserBindExpressions DEFAULT TIMES 0
+
+%PreLookupProcedureParameters DEPEND %Control DEFAULT TIMES 0
+
+%PostLookupProcedureParameters DEPEND %Control DEFAULT TIMES 0
+
+%WindowStyleFontNameVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontNameIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleFontSizeVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontSizeIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleFontStyleVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleFontStyleIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleForegroundNormalVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleForegroundNormalIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleBackgroundNormalVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleBackgroundNormalIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleForegroundSelectedVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleForegroundSelectedIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStyleBackgroundSelectedVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStyleBackgroundSelectedIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%WindowStylePictureVariable DEPEND %WindowStyles DEFAULT TIMES 0
+
+%WindowStylePictureIsVariable DEPEND %WindowStyles LONG TIMES 0
+
+%ProcedureAutoBindFieldsIgnored MULTI LONG  ()
+%ProcedureAutoBindFieldIgnored DEPEND %ProcedureAutoBindFieldsIgnored DEFAULT TIMES 0
+
+%ProcedureAutoBindProceduresIgnored MULTI LONG  ()
+%ProcedureAutoBindProcedureIgnored DEPEND %ProcedureAutoBindProceduresIgnored DEFAULT TIMES 0
+
+%ProcedureAutoBindValidToAddField LONG  (0)
+%ProcedureUseEnterInsteadTabExcludeListCombo LONG  (0)
+%ProcedureUseEnterInsteadTabEnableNextTabStop LONG  (0)
+%ExtUITabIcon DEPEND %Control DEFAULT TIMES 0
+
+%ExtUITabStyleOverrideGlobal DEPEND %Control LONG TIMES 0
+
+%ExtUITabStyle DEPEND %Control DEFAULT TIMES 1
+WHEN  ('?DynamicRegionString') ('Default')
+
+%CheckedDisables DEPEND %Control MULTI LONG TIMES 0
+
+%CheckedDisableControl DEPEND %CheckedDisables DEFAULT TIMES 0
+
+%CheckedDisableControlAction DEPEND %CheckedDisables DEFAULT TIMES 1
+WHEN  ('?DynamicRegionString')TIMES 0
+
+%UnCheckedDisables DEPEND %Control MULTI LONG TIMES 0
+
+%UnCheckedDisableControl DEPEND %UnCheckedDisables DEFAULT TIMES 0
+
+%UnCheckedDisableControlAction DEPEND %UnCheckedDisables DEFAULT TIMES 1
+WHEN  ('?DynamicRegionString')TIMES 0
+
+%ProcedureOneInstance LONG  (0)
+%FieldGradientColorType DEPEND %Control DEFAULT TIMES 1
+WHEN  ('?DynamicRegionString') ('Off')
+
+%FieldGradientColorTypeVariable DEPEND %Control DEFAULT TIMES 1
+WHEN  ('?DynamicRegionString') ('')
+
+%FieldGradientColorTypeIsVariable DEPEND %Control LONG TIMES 1
+WHEN  ('?DynamicRegionString') (0)
+
+%FieldGradientColorFrom DEPEND %Control LONG TIMES 1
+WHEN  ('?DynamicRegionString') (-1)
+
+%FieldGradientColorFromVariable DEPEND %Control DEFAULT TIMES 0
+
+%FieldGradientColorFromIsVariable DEPEND %Control LONG TIMES 1
+WHEN  ('?DynamicRegionString') (0)
+
+%FieldGradientColorTo DEPEND %Control LONG TIMES 1
+WHEN  ('?DynamicRegionString') (-1)
+
+%FieldGradientColorToVariable DEPEND %Control DEFAULT TIMES 0
+
+%FieldGradientColorToIsVariable DEPEND %Control LONG TIMES 1
+WHEN  ('?DynamicRegionString') (0)
+
+%PreserveVarsLoc MULTI LONG  ()
+%PreserveVarLoc DEPEND %PreserveVarsLoc DEFAULT TIMES 0
+
+%ActiveImageEnable DEPEND %Control LONG TIMES 0
+
+%AIObjectName DEPEND %Control DEFAULT TIMES 5
+WHEN  ('?Image1') ('AIBtn4')
+WHEN  ('?Image2') ('AIBtn2')
+WHEN  ('?Image3') ('AIBtn3')
+WHEN  ('?Image4') ('AIBtn1')
+WHEN  ('?Image5') ('AIBtn9')
+
+%AIEnableMimicControl DEPEND %Control LONG TIMES 5
+WHEN  ('?Image1') (1)
+WHEN  ('?Image2') (1)
+WHEN  ('?Image3') (1)
+WHEN  ('?Image4') (1)
+WHEN  ('?Image5') (1)
+
+%AIMimicControl DEPEND %Control DEFAULT TIMES 5
+WHEN  ('?Image1') ('?Image4')
+WHEN  ('?Image2') ('?Image4')
+WHEN  ('?Image3') ('?Image4')
+WHEN  ('?Image4') ('?Image4')
+WHEN  ('?Image5') ('?Image4')
+
+%AIImgRound DEPEND %Control LONG TIMES 0
+
+%AIOverrideImg DEPEND %Control DEFAULT TIMES 0
+
+%AIOverrideImgVariable DEPEND %Control DEFAULT TIMES 0
+
+%AIOverrideImgIsVariable DEPEND %Control LONG TIMES 5
+WHEN  ('?Image1') (0)
+WHEN  ('?Image2') (0)
+WHEN  ('?Image3') (0)
+WHEN  ('?Image4') (0)
+WHEN  ('?Image5') (0)
+
+%AIDisableImg DEPEND %Control DEFAULT TIMES 0
+
+%AIDisableImgVariable DEPEND %Control DEFAULT TIMES 0
+
+%AIDisableImgIsVariable DEPEND %Control LONG TIMES 5
+WHEN  ('?Image1') (0)
+WHEN  ('?Image2') (0)
+WHEN  ('?Image3') (0)
+WHEN  ('?Image4') (0)
+WHEN  ('?Image5') (0)
+
+%AIHotImg DEPEND %Control DEFAULT TIMES 0
+
+%AIHotImgVariable DEPEND %Control DEFAULT TIMES 0
+
+%AIHotImgIsVariable DEPEND %Control LONG TIMES 5
+WHEN  ('?Image1') (0)
+WHEN  ('?Image2') (0)
+WHEN  ('?Image3') (0)
+WHEN  ('?Image4') (0)
+WHEN  ('?Image5') (0)
+
+%AIPressedImg DEPEND %Control DEFAULT TIMES 0
+
+%AIPressedImgVariable DEPEND %Control DEFAULT TIMES 0
+
+%AIPressedImgIsVariable DEPEND %Control LONG TIMES 5
+WHEN  ('?Image1') (0)
+WHEN  ('?Image2') (0)
+WHEN  ('?Image3') (0)
+WHEN  ('?Image4') (0)
+WHEN  ('?Image5') (0)
+
+[EMBED]
+EMBED %ControlEventHandling
+[INSTANCES]
+WHEN '?CloseButton'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[GROUP]
+PRIORITY 5000
+INSTANCE 1
+[END]
+[END]
+WHEN '?Button2'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 8500
+PROPERTY:END
+DynamicRegionFeq = CREATE(0,CREATE:REGION)
+SETPOSITION(DynamicRegionFeq,118,162,133,48)
+DynamicRegionFeq{PROP:COLOR} = 00DEC4B0h
+DynamicRegionFeq{PROP:Tip} = ''
+DynamicRegionFeq{PROP:Hide} = FALSE
+?DynamicRegionString{PROP:Hide} = FALSE
+IF hwndTT
+   tt.addtip(DynamicRegionFeq{PROP:HANDLE},'Dynamic Region Tip',0,'Title Text',TTI_INFO,'Segoe UI',12)
+END    
+DISABLE(?Button2)
+ENABLE(?Button4)
+[END]
+[END]
+WHEN '?Button3'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 8500
+PROPERTY:END
+IF bBallonTips = TRUE
+   bBallonTips = FALSE
+ELSE
+   bBallonTips = TRUE
+END
+tt.SetBalloonTips(bBallonTips)
+[END]
+[END]
+WHEN '?Button4'
+[INSTANCES]
+WHEN 'Accepted'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 8500
+PROPERTY:END
+szTitle = 'A New Title'
+hwndControl = DynamicRegionFeq{PROP:HANDLE}
+tt.UpdateTitle(hwndControl,szTitle,TTI_ERROR)
+[END]
+[END]
+[END]
+EMBED %DataSection
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 1170
+PROPERTY:END
+!region Notices
+! ================================================================================
+! Notice : Copyright (C) 2017, Devuna
+!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!
+!    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
+!
+!    Devuna-CoolTips is free software: you can redistribute it and/or modify
+!    it under the terms of the GNU General Public License as published by
+!    the Free Software Foundation, either version 3 of the License, or
+!    (at your option) any later version.
+!
+!    Devuna-CoolTips is distributed in the hope that it will be useful,
+!    but WITHOUT ANY WARRANTY; without even the implied warranty of
+!    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!    GNU General Public License for more details.
+!
+!    You should have received a copy of the GNU General Public License
+!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+! ================================================================================
+!endregion Notices
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 1300
+PROPERTY:END
+DynamicRegionFeq     LONG
+bBallonTips          BOOL(True)
+[END]
+EMBED %WindowManagerMethodCodeSection
+[INSTANCES]
+WHEN 'Init'
+[INSTANCES]
+WHEN '(),BYTE'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 8150
+PROPERTY:END
+List1::OrigWndProc = ?List1{Prop:WndProc}                 ! Save address of code that handles window messages
+?List1{Prop:WndProc} = ADDRESS(List1::WndProc)            ! Re-assign address of code that handles window messages
+
+Main::OrigClientWndProc = Window{Prop:ClientWndProc}      ! Save address of code that handles client window messages
+Window{Prop:ClientWndProc} = ADDRESS(Main::ClientWndProc) ! Re-assign address of code that handles client window messages  
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 9500
+PROPERTY:END
+!fill queue with some data for list box
+loop row# = 1 to 10
+  loop col# = 1 to 3
+     execute col#
+        begin
+           myQueue.szRC01 = 'R' & FORMAT(row#,@n02) & 'C' & FORMAT(col#,@n02)
+           myQueue.szTip01 = myQueue.szRC01 & ' tip text'
+        end
+        begin
+           myQueue.szRC02 = 'R' & FORMAT(row#,@n02) & 'C' & FORMAT(col#,@n02)
+           myQueue.szTip02 = myQueue.szRC02 & ' tip text'
+        end
+        begin
+           myQueue.szRC03 = 'R' & FORMAT(row#,@n02) & 'C' & FORMAT(col#,@n02)
+           myQueue.szTip03 = myQueue.szRC03 & ' tip text'
+        end
+     end
+  end
+  add(myQueue)
+end
+[END]
+[END]
+WHEN 'Open'
+[INSTANCES]
+WHEN '()'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5001
+LABEL
+PROPERTY:END
+  IF hwndTT
+     glo:hwndTT = hwndTT
+     ! Initialize members of the TOOLINFO structure
+     memset(ADDRESS(ti),00h,SIZE(ti))
+     ti.cbSize = SIZE(ti)
+     ti.uFlags = TTF_TRANSPARENT + TTF_TRACK
+     ti.hWindow = Window{PROP:ClientHandle}
+     ti.hinst = SYSTEM{PROP:AppInstance}
+     ti.uId = 123
+
+     GetWindowRect(?List1{PROP:Handle},ti.rect)
+     pt.x = ti.rect.left
+     pt.y = ti.rect.top
+     ScreenToClient(Window{PROP:Handle},pt)
+     ti.rect.left = pt.x
+     ti.rect.top = pt.y
+     pt.x = ti.rect.right + 100
+     pt.y = ti.rect.bottom
+     ScreenToClient(Window{PROP:Handle},pt)
+     ti.rect.right = pt.x
+     ti.rect.bottom = pt.y
+     ti.lpszText = LPSTR_TEXTCALLBACK
+     IF NOT tt.AddTool(ti)
+        MESSAGE('AddTool failed!','Error',ICON:HAND)
+     END
+  END
+
+  SetWindowLong(?List1{PROP:HANDLE},GWL_USERDATA,hwndTT)
+  
+  tt.SetTipBkColor(0FFF8F0h)
+  tt.SetTipTextColor(COLOR:Blue)
+[END]
+[END]
+WHEN 'Kill'
+[INSTANCES]
+WHEN '(),BYTE'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 500
+PROPERTY:END
+IF List1::OrigWndProc
+   ?List1{Prop:WndProc} = List1::OrigWndProc              ! Restore the handler for this window
+END
+IF Main::OrigClientWndProc
+   Window{Prop:ClientWndProc} = Main::OrigClientWndProc   ! Restore the handler for this client window
+END
+[END]
+[END]
+[END]
+EMBED %WindowManagerMethodDataSection
+[INSTANCES]
+WHEN 'Open'
+[INSTANCES]
+WHEN '()'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 7500
+PROPERTY:END
+ti       LIKE(tagTOOLINFO)
+pt       LIKE(POINT)
+szTitle  CSTRING('MyTitle')
+[END]
+[END]
+WHEN 'TakeWindowEvent'
+[INSTANCES]
+WHEN '(),BYTE'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 3500
+PROPERTY:END
+ti       LIKE(tagTOOLINFO)
+pt       LIKE(POINT)
+[END]
+[END]
+WHEN 'TakeAccepted'
+[INSTANCES]
+WHEN '(),BYTE'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 3500
+PROPERTY:END
+hwndControl          HWND
+szTitle              CSTRING(100)
+[END]
+[END]
+WHEN 'Init'
+[INSTANCES]
+WHEN '(),BYTE'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 5000
+PROPERTY:END
+hWnd     HWND
+[END]
+[END]
+[END]
+EMBED %WindowEventHandling
+[INSTANCES]
+WHEN 'Sized'
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 7500
+PROPERTY:END
+memset(ADDRESS(ti),00h,SIZE(ti))
+ti.cbSize = SIZE(ti)
+ti.hWindow = Window{PROP:ClientHandle}
+ti.uId = 123
+SendMessage(hwndTT,TTM_GETTOOLINFO,0,ADDRESS(ti))
+
+GetWindowRect(?List1{PROP:Handle},ti.rect)
+pt.x = ti.rect.left
+pt.y = ti.rect.top
+ScreenToClient(Window{PROP:Handle},pt)
+ti.rect.left = pt.x
+ti.rect.top = pt.y
+pt.x = ti.rect.right + 100
+pt.y = ti.rect.bottom
+ScreenToClient(Window{PROP:Handle},pt)
+ti.rect.right = pt.x
+ti.rect.bottom = pt.y
+
+SendMessage(hwndTT,TTM_NEWTOOLRECT,0,ADDRESS(ti))
+[END]
+[END]
+EMBED %LocalProcedures
+[DEFINITION]
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 8500
+PROPERTY:END
+Main::ClientWndProc PROCEDURE(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
+!========================================================================================
+ttd             LIKE(tagNMTTDISPINFO)
+_nmhdr          LIKE(tagNMHDR),OVER(ttd)
+hwndTT          HWND
+rc              LIKE(RECT)
+_msg            LIKE(tagMSG)
+pt              LIKE(POINT)
+ti              LIKE(tagTOOLINFO)
+
+   CODE
+      CASE wMsg
+        OF WM_MOUSEMOVE
+           pt.x = BAND(lParam,0FFFFh)
+           pt.y = BSHIFT(BAND(lParam,0FFFF0000h),-16)
+           memset(ADDRESS(ti),00h,SIZE(ti))
+           ti.cbSize = SIZE(ti)
+           ti.hWindow = hwnd
+           ti.uId = 123
+           SendMessage(glo:hwndTT,TTM_GETTOOLINFO,0,ADDRESS(ti))
+           IF NOT(INRANGE(pt.x,ti.rect.left,ti.rect.right) AND |
+              INRANGE(pt.y,ti.rect.top,ti.rect.bottom))
+              SendMessage(glo:hwndTT,TTM_TRACKACTIVATE,0,ADDRESS(ti))
+           END
+           
+        OF WM_NOTIFY
+           memcpy(ADDRESS(_nmhdr),lParam,SIZE(_nmhdr))
+           CASE _nmhdr.code
+             OF TTN_POP
+
+             OF TTN_SHOW
+
+             OF TTN_GETDISPINFO
+
+             OF TTN_GETDISPINFOW
+                !reference the NMTTDISPINFO structure
+                memcpy(ADDRESS(ttd),lParam,SIZE(ttd))
+                IF ttd.hdr.idFrom = 123
+                   ttd.lpszText = ADDRESS(glo:wszListTipText)
+                   memcpy(lParam,ADDRESS(ttd),SIZE(ttd))
+                END
+                RETURN TRUE
+           END
+      END
+      RETURN(CallWindowProc(Main::OrigClientWndProc,hWnd,wMsg,wParam,lParam))
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 8500
+PROPERTY:END
+List1::WndProc PROCEDURE(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
+!========================================================================================
+ttd             LIKE(tagNMTTDISPINFO)
+_nmhdr          LIKE(tagNMHDR),OVER(ttd)
+rVal            LONG
+hwndTT          HWND
+rc              LIKE(RECT)
+ti              LIKE(tagTOOLINFO)
+x               SHORT
+y               SHORT
+tipPos          LONG
+
+   CODE
+      CASE wMsg
+        OF WM_MOUSEMOVE
+           hwndTT = GetWindowLong(hWnd,GWL_USERDATA)
+           IF hwndTT
+              GetWindowRect(hwnd,rc)
+              x = BAND(lparam,0FFFFh)
+              y = BSHIFT(BAND(lparam,0FFFF0000h),-16)
+              x += rc.left
+              y += rc.top
+              tipPos = BOR(x,BSHIFT(y,16))
+              SendMessage(hwndTT,TTM_TRACKPOSITION,0,tipPos)
+           END
+
+        OF WM_NCMOUSEMOVE
+           hwndTT = GetWindowLong(hWnd,GWL_USERDATA)
+           IF hwndTT
+              memset(ADDRESS(ti),00h,SIZE(ti))
+              ti.cbSize = SIZE(ti)
+              ti.hWindow = GetParent(hwnd)
+              ti.uId = 123
+              SendMessage(hwndTT,TTM_GETTOOLINFO,0,ADDRESS(ti))
+              SendMessage(hwndTT,TTM_TRACKACTIVATE,0,ADDRESS(ti))
+           END
+
+        OF WM_NOTIFY
+           memcpy(ADDRESS(_nmhdr),lParam,SIZE(_nmhdr))
+           CASE _nmhdr.code
+             OF TTN_POP
+                hwndTT = GetWindowLong(hWnd,GWL_USERDATA)
+                IF hWndTT
+                   memset(ADDRESS(ti),00h,SIZE(ti))
+                   ti.cbSize = SIZE(ti)
+                   ti.hWindow = GetParent(hwnd)
+                   ti.uId = 123
+                   SendMessage(hwndTT,TTM_GETTOOLINFO,0,ADDRESS(ti))
+                   SendMessage(hwndTT,TTM_TRACKACTIVATE,0,ADDRESS(ti))
+                END
+                RETURN FALSE
+
+             OF TTN_SHOW
+                hwndTT = GetWindowLong(hWnd,GWL_USERDATA)
+                IF hWndTT
+                   memset(ADDRESS(ti),00h,SIZE(ti))
+                   ti.cbSize = SIZE(ti)
+                   ti.hWindow = GetParent(hwnd)
+                   ti.uId = 123
+                   SendMessage(hwndTT,TTM_GETTOOLINFO,0,ADDRESS(ti))
+                   SendMessage(hwndTT,TTM_TRACKACTIVATE,1,ADDRESS(ti))
+                END
+
+                kcr_SetWindowPos(_nmhdr.hwndFrom,0,0,0,0,0,SWP_NOACTIVATE)
+                RETURN FALSE
+
+             OF TTN_GETDISPINFO
+                !Hook the Clarion Tooltip Window WndProc
+                IF ToolTip::OrigWndProc = 0
+                   ToolTip::OrigWndProc = GetWindowLong(_nmhdr.hwndFrom,GWL_WNDPROC)
+                   SetWindowLong(_nmhdr.hwndFrom,GWL_WNDPROC,ADDRESS(ToolTip::WndProc))
+                   !SendMessage(_nmhdr.hwndFrom,TTM_SETDELAYTIME,TTDT_AUTOMATIC,-1)
+                END
+                
+                !call the original Clarion list control wndProc to let it set the tip text
+                rVal = CallWindowProc(List1::OrigWndProc,hWnd,wMsg,wParam,lParam)
+
+                !reference the NMTTDISPINFO structure
+                memcpy(ADDRESS(ttd),lParam,SIZE(ttd))
+                IF ttd.lpszText <> 0
+                   !get the tip text
+                   strcpy(ADDRESS(glo:szListTipText),ttd.lpszText)
+                ELSE
+                   glo:szListTipText = ''
+                END
+                !convert the tip text to a unicode string
+                MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, glo:szListTipText, -1, ADDRESS(glo:wszListTipText), SIZE(glo:wszListTipText))
+
+                RETURN rVal
+          END
+      END
+      RETURN(CallWindowProc(List1::OrigWndProc,hWnd,wMsg,wParam,lParam))
+[SOURCE]
+PROPERTY:BEGIN
+PRIORITY 8500
+PROPERTY:END
+ToolTip::WndProc PROCEDURE(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
+   CODE
+      CASE wMsg
+        OF WM_SHOWWINDOW
+           RETURN 1
+      END  
+      RETURN(CallWindowProc(ToolTip::OrigWndProc,hWnd,wMsg,wParam,lParam))
+[END]
+[END]
+[ADDITION]
+NAME ABC CloseCurrentWindow
+[INSTANCE]
+INSTANCE 1
+[ADDITION]
+NAME KCR_CoolTips KCR_CoolTip
+[INSTANCE]
+INSTANCE 3
+[PROMPTS]
+%TplName DEFAULT  ('KCR_CoolTip (Devuna) Version 2017.02.02')
+%TplDescription DEFAULT  ('CoolTip Extension')
+%UseBalloonTips LONG  (1)
+%ToolTipControls MULTI LONG  (1, 2, 3, 4, 5, 6, 7)
+%ToolTipControl DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('?CloseButton')
+WHEN  (2) ('?Button2')
+WHEN  (3) ('?Button3')
+WHEN  (4) ('?Button4')
+WHEN  (5) ('?Region1')
+WHEN  (6) ('?Region2')
+WHEN  (7) ('?Region3')
+
+%MultiLineTip DEPEND %ToolTipControls LONG TIMES 7
+WHEN  (1) (0)
+WHEN  (2) (0)
+WHEN  (3) (0)
+WHEN  (4) (0)
+WHEN  (5) (0)
+WHEN  (6) (1)
+WHEN  (7) (1)
+
+%ToolTipTextOption DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('Specify Text')
+WHEN  (2) ('Use Tip Text')
+WHEN  (3) ('Use Local Data Variable')
+WHEN  (4) ('Use Global Data Variable')
+WHEN  (5) ('Specify Text')
+WHEN  (6) ('Specify Text')
+WHEN  (7) ('Specify Text')
+
+%TTLocalVariable DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('FilesOpened')
+WHEN  (2) ('FilesOpened')
+WHEN  (3) ('sLocalTip')
+WHEN  (4) ('FilesOpened')
+WHEN  (5) ('FilesOpened')
+WHEN  (6) ('FilesOpened')
+WHEN  (7) ('FilesOpened')
+
+%TTGlobalVariable DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('sGlobalTip')
+WHEN  (2) ('sGlobalTip')
+WHEN  (3) ('sGlobalTip')
+WHEN  (4) ('sGlobalTip')
+WHEN  (5) ('sGlobalTip')
+WHEN  (6) ('sGlobalTip')
+WHEN  (7) ('sGlobalTip')
+
+%TTText DEPEND %ToolTipControls DEFAULT TIMES 4
+WHEN  (1) ('Thanks for trying this Cool Demo!!!')
+WHEN  (5) ('CoolTips')
+WHEN  (6) ('Tips on strings?<<0DH,0AH>It''''s an illusion...it''''s a region.')
+WHEN  (7) ('Is this cool or what?<<0DH,0AH>and look at the size of that fish!')
+
+%ControlGetsFocus DEPEND %ToolTipControls LONG TIMES 7
+WHEN  (1) (1)
+WHEN  (2) (1)
+WHEN  (3) (1)
+WHEN  (4) (1)
+WHEN  (5) (1)
+WHEN  (6) (1)
+WHEN  (7) (1)
+
+%ToolTipFeq DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('?CloseButton')
+WHEN  (2) ('?Button2')
+WHEN  (3) ('?Button3')
+WHEN  (4) ('?Button4')
+WHEN  (5) ('?Region1')
+WHEN  (6) ('?Region2')
+WHEN  (7) ('?Region3')
+
+%ApplyAsRegularTip LONG  (0)
+%DontApply LONG  (0)
+%TplVersion DEFAULT  ('2017.02.02')
+%TTTitleText DEPEND %ToolTipControls DEFAULT TIMES 1
+WHEN  (1) ('CoolTips')
+
+%TTIcon DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('Info')
+WHEN  (2) ('None')
+WHEN  (3) ('None')
+WHEN  (4) ('None')
+WHEN  (5) ('None')
+WHEN  (6) ('None')
+WHEN  (7) ('None')
+
+%TTFontName DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('Segoe UI Semilight')
+WHEN  (2) ('')
+WHEN  (3) ('')
+WHEN  (4) ('')
+WHEN  (5) ('')
+WHEN  (6) ('')
+WHEN  (7) ('')
+
+%TTFontSize DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('9')
+WHEN  (2) ('0')
+WHEN  (3) ('0')
+WHEN  (4) ('0')
+WHEN  (5) ('0')
+WHEN  (6) ('0')
+WHEN  (7) ('0')
+
+%TTFontColor DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('0')
+WHEN  (2) ('')
+WHEN  (3) ('')
+WHEN  (4) ('')
+WHEN  (5) ('')
+WHEN  (6) ('')
+WHEN  (7) ('')
+
+%TTFontStyle DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('350')
+WHEN  (2) ('400')
+WHEN  (3) ('400')
+WHEN  (4) ('400')
+WHEN  (5) ('400')
+WHEN  (6) ('400')
+WHEN  (7) ('400')
+
+%TTFontCharSet DEPEND %ToolTipControls DEFAULT TIMES 7
+WHEN  (1) ('1')
+WHEN  (2) ('1')
+WHEN  (3) ('1')
+WHEN  (4) ('1')
+WHEN  (5) ('1')
+WHEN  (6) ('1')
+WHEN  (7) ('1')
+
+%FirstInstance DEPEND %ToolTipControls DEFAULT TIMES 0
+
+[ADDITION]
+NAME ABC WindowResize
+[FIELDPROMPT]
+%ResizeAnchorTop DEPEND %Control LONG TIMES 0
+
+%ResizeAnchorLeft DEPEND %Control LONG TIMES 0
+
+%ResizeAnchorRight DEPEND %Control LONG TIMES 0
+
+%ResizeAnchorBottom DEPEND %Control LONG TIMES 0
+
+%ResizeAnchorGrowTop DEPEND %Control LONG TIMES 0
+
+%ResizeAnchorGrowLeft DEPEND %Control LONG TIMES 0
+
+%ResizeAnchorGrowRight DEPEND %Control LONG TIMES 0
+
+%ResizeAnchorGrowBottom DEPEND %Control LONG TIMES 0
+
+[INSTANCE]
+INSTANCE 5
+[PROMPTS]
+%ClassItem UNIQUE DEFAULT  ('Default')
+%DefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 1
+WHEN  ('Default') ('WindowResizeClass')
+
+%ActualDefaultBaseClassType DEPEND %ClassItem DEFAULT TIMES 1
+WHEN  ('Default') ('')
+
+%ClassLines DEPEND %ClassItem MULTI DEFAULT TIMES 1
+WHEN  ('Default') ('Init {19}PROCEDURE(BYTE AppStrategy=AppStrategy:Resize,BYTE SetWindowMinSize=False,BYTE SetWindowMaxSize=False)')
+
+%AppStrategy DEFAULT  ('Spread')
+%RestrictMinSize LONG  (1)
+%WindowMinWidth DEFAULT  ('')
+%WindowMinHeight DEFAULT  ('')
+%RestrictMaxSize LONG  (0)
+%WindowMaxWidth DEFAULT  ('')
+%WindowMaxHeight DEFAULT  ('')
+%AutoFindParents DEFAULT  ('Default')
+%DeferMoves DEFAULT  ('Default')
+%OverrideControls MULTI LONG  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+%OverrideControl DEPEND %OverrideControls DEFAULT TIMES 14
+WHEN  (1) ('?List1')
+WHEN  (2) ('?Image4')
+WHEN  (3) ('?Image2')
+WHEN  (4) ('?Image3')
+WHEN  (5) ('?Image1')
+WHEN  (6) ('?Region3')
+WHEN  (7) ('?Region1')
+WHEN  (8) ('?String1')
+WHEN  (9) ('?Region2')
+WHEN  (10) ('?Image5')
+WHEN  (11) ('?Button2')
+WHEN  (12) ('?Button3')
+WHEN  (13) ('?Button4')
+WHEN  (14) ('?CloseButton')
+
+%DisableResize DEPEND %OverrideControls LONG TIMES 14
+WHEN  (1) (0)
+WHEN  (2) (0)
+WHEN  (3) (0)
+WHEN  (4) (0)
+WHEN  (5) (0)
+WHEN  (6) (0)
+WHEN  (7) (0)
+WHEN  (8) (0)
+WHEN  (9) (0)
+WHEN  (10) (0)
+WHEN  (11) (0)
+WHEN  (12) (0)
+WHEN  (13) (0)
+WHEN  (14) (0)
+
+%HorizResize DEPEND %OverrideControls DEFAULT TIMES 14
+WHEN  (1) ('Constant Right Border')
+WHEN  (2) ('Lock Width')
+WHEN  (3) ('Lock Width')
+WHEN  (4) ('Lock Width')
+WHEN  (5) ('Lock Width')
+WHEN  (6) ('Lock Width')
+WHEN  (7) ('Lock Width')
+WHEN  (8) ('Lock Width')
+WHEN  (9) ('Lock Width')
+WHEN  (10) ('Lock Width')
+WHEN  (11) ('Lock Width')
+WHEN  (12) ('Lock Width')
+WHEN  (13) ('Lock Width')
+WHEN  (14) ('Lock Width')
+
+%VertResize DEPEND %OverrideControls DEFAULT TIMES 14
+WHEN  (1) ('Constant Bottom Border')
+WHEN  (2) ('Lock Height')
+WHEN  (3) ('Lock Height')
+WHEN  (4) ('Lock Height')
+WHEN  (5) ('Lock Height')
+WHEN  (6) ('Lock Height')
+WHEN  (7) ('Lock Height')
+WHEN  (8) ('Lock Height')
+WHEN  (9) ('Lock Height')
+WHEN  (10) ('Lock Height')
+WHEN  (11) ('Lock Height')
+WHEN  (12) ('Lock Height')
+WHEN  (13) ('Lock Height')
+WHEN  (14) ('Lock Height')
+
+%HorizPositional DEPEND %OverrideControls DEFAULT TIMES 14
+WHEN  (1) ('Fix Left')
+WHEN  (2) ('Fix Right')
+WHEN  (3) ('Fix Right')
+WHEN  (4) ('Fix Right')
+WHEN  (5) ('Fix Left')
+WHEN  (6) ('Fix Left')
+WHEN  (7) ('Fix Right')
+WHEN  (8) ('Fix Right')
+WHEN  (9) ('Fix Left')
+WHEN  (10) ('Fix Right')
+WHEN  (11) ('Fix Right')
+WHEN  (12) ('Fix Right')
+WHEN  (13) ('Fix Right')
+WHEN  (14) ('Fix Right')
+
+%VertPositional DEPEND %OverrideControls DEFAULT TIMES 14
+WHEN  (1) ('Fix Top')
+WHEN  (2) ('Fix Top')
+WHEN  (3) ('Fix Top')
+WHEN  (4) ('Fix Top')
+WHEN  (5) ('Fix Top')
+WHEN  (6) ('Fix Top')
+WHEN  (7) ('Fix Top')
+WHEN  (8) ('Fix Top')
+WHEN  (9) ('Fix Top')
+WHEN  (10) ('Fix Bottom')
+WHEN  (11) ('Fix Top')
+WHEN  (12) ('Fix Top')
+WHEN  (13) ('Fix Top')
+WHEN  (14) ('Fix Top')
+
+%GlobalObject DEPEND %ClassItem DEFAULT TIMES 1
+WHEN  ('Default') ('NO')
+
+%ThisObjectName DEPEND %ClassItem DEFAULT TIMES 1
+WHEN  ('Default') ('Resizer')
+
+%UseDefaultABCBaseClass DEPEND %ClassItem LONG TIMES 1
+WHEN  ('Default') (1)
+
+%UseABCBaseClass DEPEND %ClassItem LONG TIMES 1
+WHEN  ('Default') (1)
+
+%ABCBaseClass DEPEND %ClassItem DEFAULT TIMES 1
+WHEN  ('Default') ('ADOBlob')
+
+%ExtBaseClass DEPEND %ClassItem DEFAULT TIMES 0
+
+%BaseClassIncludeFile DEPEND %ClassItem DEFAULT TIMES 0
+
+%DeriveFromBaseClass DEPEND %ClassItem LONG TIMES 1
+WHEN  ('Default') (0)
+
+%NewMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewMethodName DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewMethodPrototype DEPEND %NewMethods DEFAULT TIMES 0
+
+%NewClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%NewClassProperty DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataType DEPEND %NewClassPropertyItems DEFAULT TIMES 1
+WHEN  ('Default')TIMES 0
+
+%NewClassOtherType DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataIsRef DEPEND %NewClassPropertyItems LONG TIMES 0
+
+%NewClassDataSize DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim1 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim2 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim3 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%NewClassDataDim4 DEPEND %NewClassPropertyItems DEFAULT TIMES 0
+
+%ClassMethods DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassMethodName DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassMethodPrototype DEPEND %ClassMethods DEFAULT TIMES 0
+
+%ClassPropertyItems DEPEND %ClassItem MULTI LONG TIMES 0
+
+%ClassProperty DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataType DEPEND %ClassPropertyItems DEFAULT TIMES 1
+WHEN  ('Default')TIMES 0
+
+%ClassOtherType DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataIsRef DEPEND %ClassPropertyItems LONG TIMES 0
+
+%ClassDataSize DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim1 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim2 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim3 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+%ClassDataDim4 DEPEND %ClassPropertyItems DEFAULT TIMES 0
+
+[WINDOW]
+Window  WINDOW('CoolTips Demo'),AT(,,260,224),FONT('Segoe UI Semilight',11),RESIZE,CENTER, |
+          ICON('CoolDemo.ico'),GRAY,IMM
+          IMAGE('down.ico'),AT(213,2),USE(?Image4),#ORIG(?Image4),#ORDINAL(1)
+          IMAGE('right.ico'),AT(188,26),USE(?Image2),#ORIG(?Image2),#ORDINAL(2)
+          IMAGE('left.ico'),AT(238,26),USE(?Image3),#ORIG(?Image3),#ORDINAL(3)
+          IMAGE('randy.jpg'),AT(10,34),USE(?Image1),#ORIG(?Image1),#ORDINAL(4)
+          REGION,AT(10,34,160,120),USE(?Region3),#ORIG(?Region3),#ORDINAL(5)
+          REGION,AT(204,18,34,31),USE(?Region1),#ORIG(?Region1),#ORDINAL(6)
+          STRING('Move the mouse around to see the tool tips!'),AT(16,4),USE(?String1),FONT('Comic Sans MS', |
+            ,,,CHARSET:ANSI),TRN,#ORIG(?String1),#ORDINAL(7)
+          REGION,AT(12,2,157,14),USE(?Region2),#ORIG(?Region2),#ORDINAL(8)
+          IMAGE('up.ico'),AT(213,48),USE(?Image5),#ORIG(?Image5),#ORDINAL(9)
+          BUTTON('Toggle Balloon'),AT(191,75,60,14),USE(?Button3),#ORIG(?Button3),#ORDINAL(10)
+          BUTTON('Create a Region'),AT(191,94,60,14),USE(?Button2),TIP('This is Button ' & |
+            '2''s prop{{tip}'),#ORIG(?Button2),#ORDINAL(11)
+          BUTTON('Update Tip Title'),AT(191,114,60,14),USE(?Button4),DISABLE,#ORIG(?Button4), |
+            #ORDINAL(12)
+          BUTTON('Cl&ose'),AT(191,136,60,14),USE(?CloseButton),#ORIG(?Button1),#ORDINAL(13)
+          LIST,AT(10,162,98,48),USE(?List1),VSCROLL,FORMAT('30C|MP~Col1~@s6@30C|MP~Col2' & |
+            '~@s6@30C|P~Col3~@s6@'),FROM(myQueue),TIP('This is the ListBox tip'),#FIELDS(szRC01, |
+            szRC02,szRC03),#ORIG(?List1),#ORDINAL(14)
+          STRING('Region created at run time.'),AT(118,181,133),USE(?DynamicRegionString), |
+            FONT(,,00B48246h),CENTER,HIDE,#ORDINAL(15)
+        END
+
 [END]
