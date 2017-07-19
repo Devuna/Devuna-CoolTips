@@ -1,43 +1,42 @@
 /*
 ! ================================================================================
 ! Notice : Copyright (C) 2017, Devuna
-!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!          Distributed under the MIT License (https://opensource.org/licenses/MIT)
 !
 !    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-ScreenCoolTips)
 !
 !    Devuna-CoolTips is free software: you can redistribute it and/or modify
-!    it under the terms of the GNU General Public License as published by
-!    the Free Software Foundation, either version 3 of the License, or
-!    (at your option) any later version.
+!    it under the terms of the MIT License as published by
+!    the Open Source Initiative.
 !
 !    Devuna-CoolTips is distributed in the hope that it will be useful,
 !    but WITHOUT ANY WARRANTY; without even the implied warranty of
 !    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-!    GNU General Public License for more details.
+!    MIT License for more details.
 !
-!    You should have received a copy of the GNU General Public License
-!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+!    You should have received a copy of the MIT License
+!    along with Devuna-CoolTips.  If not, see <https://opensource.org/licenses/MIT>.
 ! ================================================================================
 */
 
      address {
-        font-style: normal; 
+        font-style: normal;
         font-family: Courier New,sans-serif;
      }
 
-     .bannerBase { 
+     .bannerBase {
         font-size: 2em ;
-        font-weight: bold; 
-        margin: 6pt  0pt  6pt  0pt ; 
-        padding: 5pt  0pt  5pt  5pt ; 
-        font-family: segoe ui semilight,sans-serif; 
+        font-weight: bold;
+        margin: 6pt  0pt  6pt  0pt ;
+        padding: 5pt  0pt  5pt  5pt ;
+        font-family: segoe ui semilight,sans-serif;
         background-color:#fff29d;
         border-bottom:solid;
         border-width:thin;
      }
      .base {
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  0pt ; 
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  0pt ;
         font-family: segoe ui semilight,sans-serif;
      }
 
@@ -47,37 +46,37 @@
      }
 
      blockquote {
-        margin: 0pt  18pt  1px  18pt ; 
+        margin: 0pt  18pt  1px  18pt ;
         font-family: Courier New,sans-serif;
         font-size: 12pt;
         background-color: silver;
         padding:5px;
      }
 
-     .bullet1 { 
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  0pt; 
+     .bullet1 {
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  0pt;
         font-family: segoe ui semilight,sans-serif;
      }
 
      .bullet2 {
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  27pt ; 
-        text-indent: -27pt ; 
-        font-family: segoe ui semilight,sans-serif;  
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  27pt ;
+        text-indent: -27pt ;
+        font-family: segoe ui semilight,sans-serif;
      }
 
-     .bullet3 { 
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  27pt ; 
-        text-indent: -27pt ; 
-        font-family: segoe ui semilight,sans-serif;  
+     .bullet3 {
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  27pt ;
+        text-indent: -27pt ;
+        font-family: segoe ui semilight,sans-serif;
      }
 
-     .bullet4 { 
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  0pt; 
-        font-family: segoe ui semilight,sans-serif;  
+     .bullet4 {
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  0pt;
+        font-family: segoe ui semilight,sans-serif;
      }
 
     .bullet5 {
@@ -86,157 +85,157 @@
         font-family: segoe ui semilight,sans-serif;
     }
 
-    .buttonBar { 
-        font-size: 8pt ; 
-        font-weight: bold; 
-        margin: 6pt  0pt  6pt  -0.1in ; 
-        font-family: segoe ui semilight,sans-serif;  
+    .buttonBar {
+        font-size: 8pt ;
+        font-weight: bold;
+        margin: 6pt  0pt  6pt  -0.1in ;
+        font-family: segoe ui semilight,sans-serif;
     }
 
-     code { 
+     code {
         font-family: Courier New,sans-serif;
         font-size: 12pt;
         background-color: silver;
         padding:5px;
      }
 
-     dd { 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     .DefinitionList { 
-        margin: 0pt  0pt  1px  18pt ;  
-     }
-
-     .DefinitionTerm { 
-        margin: 0pt  0pt  1px  0pt ;  
-     }
-
-     dir { 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     dir li { 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     dl {
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     dt { 
-        font-family: segoe ui semilight,sans-serif; 
-        font-style:italic  
-     }
-
-     .footnotereference {
-        vertical-align: super; 
-        font-weight: bold; 
-     }
-
-     h1 { 
-        font-size: 2em; 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     h2 { 
-        font-size: 1.5em; 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     h3 { 
-        font-size: 1.17em; 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     h4 { 
-        font-size: 1.12em; 
-        font-family: segoe ui semilight,sans-serif;  }
-
-     h5 { 
-        font-size: .83em; 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     h6 {
-        font-size: .75em; 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     .htmlbase { 
-        font-size: 14pt ; 
-        margin: 0pt  0pt  1px  0pt ; 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     .hyperlink { 
-        text-decoration: underline ; 
-        color: #0000ff;  
-     }
-
-     kbd { 
-        font-family: Courier New,sans-serif;  
-     }
-
-     listing { 
-        font-family: Courier New,sans-serif;
-     }
-
-     menu { 
-        font-family: segoe ui semilight,sans-serif;  
-     }
-
-     menu li { 
+     dd {
         font-family: segoe ui semilight,sans-serif;
      }
 
-     .normal { 
-        font-size: 14pt ; 
-        margin: 5pt  0pt  5pt  0pt ; 
-        font-family: segoe ui semilight,sans-serif;  
+     .DefinitionList {
+        margin: 0pt  0pt  1px  18pt ;
      }
 
-     .number1 { 
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  0pt; 
-        font-family: segoe ui semilight,sans-serif;  
+     .DefinitionTerm {
+        margin: 0pt  0pt  1px  0pt ;
      }
 
-     .number2 { 
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  0pt; 
-        font-family: segoe ui semilight,sans-serif;  
+     dir {
+        font-family: segoe ui semilight,sans-serif;
      }
 
-     .number3 { 
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  0pt; 
-        font-family: segoe ui semilight,sans-serif;  
+     dir li {
+        font-family: segoe ui semilight,sans-serif;
      }
 
-     .number4 { 
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  0pt; 
-        font-family: segoe ui semilight,sans-serif;  
+     dl {
+        font-family: segoe ui semilight,sans-serif;
      }
 
-     .number5 { 
-        font-size: 11pt ; 
-        margin: 0pt  0pt  1px  0pt; 
-        font-family: segoe ui semilight,sans-serif;  
+     dt {
+        font-family: segoe ui semilight,sans-serif;
+        font-style:italic
      }
 
-     ol { 
-        margin: 0pt  0pt  1px  27pt ; 
-        font-family: segoe ui semilight,sans-serif;  
+     .footnotereference {
+        vertical-align: super;
+        font-weight: bold;
      }
 
-     ol li { 
-        font-family: segoe ui semilight,sans-serif;  
+     h1 {
+        font-size: 2em;
+        font-family: segoe ui semilight,sans-serif;
      }
 
-     p { 
-        font-family: segoe ui semilight,sans-serif;  
+     h2 {
+        font-size: 1.5em;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     h3 {
+        font-size: 1.17em;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     h4 {
+        font-size: 1.12em;
+        font-family: segoe ui semilight,sans-serif;  }
+
+     h5 {
+        font-size: .83em;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     h6 {
+        font-size: .75em;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     .htmlbase {
+        font-size: 14pt ;
+        margin: 0pt  0pt  1px  0pt ;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     .hyperlink {
+        text-decoration: underline ;
+        color: #0000ff;
+     }
+
+     kbd {
+        font-family: Courier New,sans-serif;
+     }
+
+     listing {
+        font-family: Courier New,sans-serif;
+     }
+
+     menu {
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     menu li {
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     .normal {
+        font-size: 14pt ;
+        margin: 5pt  0pt  5pt  0pt ;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     .number1 {
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  0pt;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     .number2 {
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  0pt;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     .number3 {
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  0pt;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     .number4 {
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  0pt;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     .number5 {
+        font-size: 11pt ;
+        margin: 0pt  0pt  1px  0pt;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     ol {
+        margin: 0pt  0pt  1px  27pt ;
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     ol li {
+        font-family: segoe ui semilight,sans-serif;
+     }
+
+     p {
+        font-family: segoe ui semilight,sans-serif;
      }
 
      .indent1 {
@@ -247,23 +246,23 @@
         margin-left:40px;
      }
 
-     pre { 
-        font-family: Courier New,sans-serif;  
+     pre {
+        font-family: Courier New,sans-serif;
      }
 
-     tt { 
-        font-family: Courier New,sans-serif;  
+     tt {
+        font-family: Courier New,sans-serif;
      }
 
-     ul { 
-        margin: 0pt  0pt  1px  27pt ; 
-        font-family: segoe ui semilight,sans-serif;  
+     ul {
+        margin: 0pt  0pt  1px  27pt ;
+        font-family: segoe ui semilight,sans-serif;
      }
 
-     ul li { 
-        font-family: segoe ui semilight,sans-serif;  
+     ul li {
+        font-family: segoe ui semilight,sans-serif;
      }
 
-     xmp { 
-        font-family: Courier New,sans-serif;  
+     xmp {
+        font-family: Courier New,sans-serif;
      }

@@ -550,7 +550,7 @@ PROPERTY:END
       SetWindowLong(HWND,SHORT,LONG),LONG,RAW,PASCAL,NAME('SetWindowLongA'),PROC
       kcr_SetProp(HWND hwnd, *CSTRING szPropertyName, HANDLE hData),BOOL,RAW,PASCAL,PROC,NAME('SetPropA')
       kcr_ShowWindow(HWND hWnd, LONG nCmdShow),BOOL,PASCAL,PROC,NAME('ShowWindow')
-      kcr_SetWindowPos(HWND hWnd, HWND hwndInsertAfter, ULONG x, ULONG y, ULONG cx, ULONG cy, USHORT uFlags),RAW,PASCAL,NAME('SetWindowPos')      
+      kcr_SetWindowPos(HWND hWnd, HWND hwndInsertAfter, ULONG x, ULONG y, ULONG cx, ULONG cy, USHORT uFlags),RAW,PASCAL,NAME('SetWindowPos')
    END
 [END]
 EMBED %AfterGlobalIncludes
@@ -583,22 +583,21 @@ PROPERTY:END
 !region Notices
 ! ================================================================================
 ! Notice : Copyright (C) 2017, Devuna
-!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!          Distributed under the MIT License (https://opensource.org/licenses/MIT)
 !
 !    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
 !
 !    Devuna-CoolTips is free software: you can redistribute it and/or modify
-!    it under the terms of the GNU General Public License as published by
-!    the Free Software Foundation, either version 3 of the License, or
-!    (at your option) any later version.
+!    it under the terms of the MIT License as published by
+!    the Open Source Initiative.
 !
 !    Devuna-CoolTips is distributed in the hope that it will be useful,
 !    but WITHOUT ANY WARRANTY; without even the implied warranty of
 !    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-!    GNU General Public License for more details.
+!    MIT License for more details.
 !
-!    You should have received a copy of the GNU General Public License
-!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+!    You should have received a copy of the MIT License
+!    along with Devuna-CoolTips.  If not, see <https://opensource.org/licenses/MIT>.
 ! ================================================================================
 !endregion Notices
 [END]
@@ -649,22 +648,21 @@ PROPERTY:END
 !region Notices
 ! ================================================================================
 ! Notice : Copyright (C) 2017, Devuna
-!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!          Distributed under the MIT License (https://opensource.org/licenses/MIT)
 !
 !    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
 !
 !    Devuna-CoolTips is free software: you can redistribute it and/or modify
-!    it under the terms of the GNU General Public License as published by
-!    the Free Software Foundation, either version 3 of the License, or
-!    (at your option) any later version.
+!    it under the terms of the MIT License as published by
+!    the Open Source Initiative.
 !
 !    Devuna-CoolTips is distributed in the hope that it will be useful,
 !    but WITHOUT ANY WARRANTY; without even the implied warranty of
 !    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-!    GNU General Public License for more details.
+!    MIT License for more details.
 !
-!    You should have received a copy of the GNU General Public License
-!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+!    You should have received a copy of the MIT License
+!    along with Devuna-CoolTips.  If not, see <https://opensource.org/licenses/MIT>.
 ! ================================================================================
 !endregion Notices
 [END]
@@ -1294,7 +1292,7 @@ DynamicRegionFeq{PROP:Hide} = FALSE
 ?DynamicRegionString{PROP:Hide} = FALSE
 IF hwndTT
    tt.addtip(DynamicRegionFeq{PROP:HANDLE},'Dynamic Region Tip',0,'Title Text',TTI_INFO,'Segoe UI',12)
-END    
+END
 DISABLE(?Button2)
 ENABLE(?Button4)
 [END]
@@ -1338,22 +1336,21 @@ PROPERTY:END
 !region Notices
 ! ================================================================================
 ! Notice : Copyright (C) 2017, Devuna
-!          Distributed under LGPLv3 (http://www.gnu.org/licenses/lgpl.html)
+!          Distributed under the MIT License (https://opensource.org/licenses/MIT)
 !
 !    This file is part of Devuna-CoolTips (https://github.com/Devuna/Devuna-CoolTips)
 !
 !    Devuna-CoolTips is free software: you can redistribute it and/or modify
-!    it under the terms of the GNU General Public License as published by
-!    the Free Software Foundation, either version 3 of the License, or
-!    (at your option) any later version.
+!    it under the terms of the MIT License as published by
+!    the Open Source Initiative.
 !
 !    Devuna-CoolTips is distributed in the hope that it will be useful,
 !    but WITHOUT ANY WARRANTY; without even the implied warranty of
 !    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-!    GNU General Public License for more details.
+!    MIT License for more details.
 !
-!    You should have received a copy of the GNU General Public License
-!    along with Devuna-CoolTips.  If not, see <http://www.gnu.org/licenses/>.
+!    You should have received a copy of the MIT License
+!    along with Devuna-CoolTips.  If not, see <https://opensource.org/licenses/MIT>.
 ! ================================================================================
 !endregion Notices
 [SOURCE]
@@ -1377,7 +1374,7 @@ List1::OrigWndProc = ?List1{Prop:WndProc}                 ! Save address of code
 ?List1{Prop:WndProc} = ADDRESS(List1::WndProc)            ! Re-assign address of code that handles window messages
 
 Main::OrigClientWndProc = Window{Prop:ClientWndProc}      ! Save address of code that handles client window messages
-Window{Prop:ClientWndProc} = ADDRESS(Main::ClientWndProc) ! Re-assign address of code that handles client window messages  
+Window{Prop:ClientWndProc} = ADDRESS(Main::ClientWndProc) ! Re-assign address of code that handles client window messages
 [SOURCE]
 PROPERTY:BEGIN
 PRIORITY 9500
@@ -1441,7 +1438,7 @@ PROPERTY:END
   END
 
   SetWindowLong(?List1{PROP:HANDLE},GWL_USERDATA,hwndTT)
-  
+
   tt.SetTipBkColor(0FFF8F0h)
   tt.SetTipTextColor(COLOR:Blue)
 [END]
@@ -1573,7 +1570,7 @@ ti              LIKE(tagTOOLINFO)
               INRANGE(pt.y,ti.rect.top,ti.rect.bottom))
               SendMessage(glo:hwndTT,TTM_TRACKACTIVATE,0,ADDRESS(ti))
            END
-           
+
         OF WM_NOTIFY
            memcpy(ADDRESS(_nmhdr),lParam,SIZE(_nmhdr))
            CASE _nmhdr.code
@@ -1671,7 +1668,7 @@ tipPos          LONG
                    SetWindowLong(_nmhdr.hwndFrom,GWL_WNDPROC,ADDRESS(ToolTip::WndProc))
                    !SendMessage(_nmhdr.hwndFrom,TTM_SETDELAYTIME,TTDT_AUTOMATIC,-1)
                 END
-                
+
                 !call the original Clarion list control wndProc to let it set the tip text
                 rVal = CallWindowProc(List1::OrigWndProc,hWnd,wMsg,wParam,lParam)
 
@@ -1699,7 +1696,7 @@ ToolTip::WndProc PROCEDURE(HWND hWnd, UINT wMsg, WPARAM wParam, LPARAM lParam)
       CASE wMsg
         OF WM_SHOWWINDOW
            RETURN 1
-      END  
+      END
       RETURN(CallWindowProc(ToolTip::OrigWndProc,hWnd,wMsg,wParam,lParam))
 [END]
 [END]
