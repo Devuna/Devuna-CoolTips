@@ -3,7 +3,7 @@
 ### CoolTips Templates are written in and for Clarion for Windows ###
 
 ## License ##
-Distributed under [GPL 3.0](http://www.gnu.org/licenses/gpl-3.0.txt "GPL 3.0")
+Distributed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Overview ##
 CoolTips consists of a class wrapper for the Microsoft tooltip common control [comctl32.dll] which provides tooltips for the controls on a window. And, a template set to  make it easy to add balloon tooltips and tooltips on regions.
